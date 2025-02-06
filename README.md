@@ -265,7 +265,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./catacisneros.github.io/ArduinoPic.jpg"
+                src="./assets/ArduinoPic.jpg"
                 alt="Project 1"
                 class="project-img"
               />
