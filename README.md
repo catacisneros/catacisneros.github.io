@@ -368,7 +368,7 @@
             class="icon contact-icon"
           />
           <p>
-  <a href="https://linkedin.com/in/catalinacisneros" alt="LinkedIn">LinkedIn</a>
+            <a href="https://linkedin.com/in/catalinacisneros" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </p>
         </div>
       </div>
