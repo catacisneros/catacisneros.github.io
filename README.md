@@ -64,7 +64,7 @@
             onclick="location.href='https://linkedin.com/in/catalinacisneros'"
           />
           <img
-            src="github.png"
+            src="https://github.com/user-attachments/assets/1428656c-2a6c-42e7-b49f-28b4124d1985"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://github.com/catacisneros'"
@@ -78,7 +78,7 @@
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="catacisneros.github.io/Profile2"
+            src="https://github.com/user-attachments/assets/48dffc22-0f57-4682-954f-066cc46cc75e"
             alt="Profile Picture"
             class="about-pic"
           />
@@ -87,7 +87,7 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./experience.png"
+                src="https://github.com/user-attachments/assets/c40a5869-cd5b-4b56-89b4-b450c9454f38"
                 alt="Experience icon"
                 class="icon"
               />
@@ -96,7 +96,7 @@
             </div>
             <div class="details-container">
               <img
-                src="./education.png"
+                src="https://github.com/user-attachments/assets/6fc7e1a9-10a4-423c-8807-02710cf981ef"
                 alt="Education icon"
                 class="icon"
               />
@@ -117,7 +117,7 @@
         </div>
       </div>
       <img
-        src="./arrow.png"
+        src="https://github.com/user-attachments/assets/0adf34cd-4dfe-499d-91de-c9770f183747"
         alt="Arrow Icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
@@ -133,7 +133,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/a049b394-f35e-4754-90b0-65e2ca9f11e7"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -144,7 +144,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -155,7 +155,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -166,7 +166,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -177,7 +177,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -193,7 +193,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -204,7 +204,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -215,7 +215,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -226,7 +226,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -237,7 +237,7 @@
               </article>
               <article>
                 <img
-                  src="./checkmark.png"
+                  src="https://github.com/user-attachments/assets/01c9a7ac-3e8e-4c2c-98c2-1770f1a172f0"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -251,7 +251,7 @@
         </div>
       </div>
       <img
-        src="./arrow.png"
+        src="https://github.com/user-attachments/assets/1c6ef17b-4d10-455f-bfff-b815ffa244d8"
         alt="Arrow Icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
@@ -265,7 +265,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/ArduinoPic.jpg"
+                src="https://github.com/user-attachments/assets/f431b534-a6a6-4c24-8b57-cc92e2e0aa86"
                 alt="Project 1"
                 class="project-img"
               />
@@ -291,7 +291,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./Song_Generator.png"
+                src="https://github.com/user-attachments/assets/0bede287-700c-4400-9d1d-c7344836664b"
                 alt="Project 2"
                 class="project-img"
               />
@@ -317,7 +317,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./Song_Generator.png"
+                src="https://github.com/user-attachments/assets/0bede287-700c-4400-9d1d-c7344836664b"
                 alt="Project 2"
                 class="project-img"
               />
@@ -341,7 +341,7 @@
         </div>
       </div>
       <img
-        src="./arrow.png"
+        src="https://github.com/user-attachments/assets/318260f8-1431-47ce-8b62-b71bfb16f470"
         alt="Arrow Icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
@@ -353,7 +353,7 @@
       <div class="contact-info-upper-container contact-gap">
         <div class="contact-info-container">
           <img
-            src="./email.png"
+            src="https://github.com/user-attachments/assets/71401bf4-a77c-4bff-89e9-a653560b6e72"
             alt="email icon"
             class="icon contact-icon email-icon"
           />
@@ -363,7 +363,7 @@
         </div>
         <div class="contact-info-container">
           <img
-            src="./linkedin.png"
+            src="https://github.com/user-attachments/assets/225591ad-bdab-436c-8a70-a77ce9635e55"
             alt="linkedin icon"
             class="icon contact-icon"
           />
