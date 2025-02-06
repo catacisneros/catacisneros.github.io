@@ -48,7 +48,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./CV.pdf')"
+            onclick="window.open('CV.pdf')"
           >
             Download CV
           </button>
@@ -64,7 +64,7 @@
             onclick="location.href='https://linkedin.com/in/catalinacisneros'"
           />
           <img
-            src="./github.png"
+            src="github.png"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://github.com/catacisneros'"
