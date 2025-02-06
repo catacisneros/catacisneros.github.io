@@ -39,8 +39,7 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="<img width="294" alt="Profile_Pic" src="https://github.com/user-attachments/assets/0ab7b2ea-75e8-4829-a704-1be5b74ed868" />
-file_Pic.png" alt="Catalina Cisneros Profile Picture" />
+        <img width="294" alt="Profile_Pic" src="https://github.com/user-attachments/assets/0ab7b2ea-75e8-4829-a704-1be5b74ed868" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello I'm</p>
