@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="https://catacisneros.github.io/style.css">
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
