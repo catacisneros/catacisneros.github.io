@@ -78,7 +78,7 @@
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./Picture 1.png"
+            src="catacisneros.github.io/Profile2"
             alt="Profile Picture"
             class="about-pic"
           />
