@@ -57,8 +57,8 @@
           </button>
         </div>
         <div id="socials-container">
-          <img
-            src="./linkedin.png"
+        <img
+            src="https://github.com/user-attachments/assets/63a0e66a-7964-4e57-8d87-3121e5cda3b2"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://linkedin.com/in/catalinacisneros'"
