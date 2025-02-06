@@ -39,7 +39,7 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/Profile_Pic.png" alt="Catalina Cisneros Profile Picture" />
+        <img src="./Profile_Pic.png" alt="Catalina Cisneros Profile Picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello I'm</p>
@@ -48,7 +48,7 @@
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/CV.pdf')"
+            onclick="window.open('./CV.pdf')"
           >
             Download CV
           </button>
@@ -58,13 +58,13 @@
         </div>
         <div id="socials-container">
           <img
-            src="./assets/linkedin.png"
+            src="./linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://linkedin.com/in/catalinacisneros'"
           />
           <img
-            src="./assets/github.png"
+            src="./github.png"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://github.com/catacisneros'"
@@ -78,7 +78,7 @@
       <div class="section-container">
         <div class="section__pic-container">
           <img
-            src="./assets/Picture 1.png"
+            src="./Picture 1.png"
             alt="Profile Picture"
             class="about-pic"
           />
@@ -87,7 +87,7 @@
           <div class="about-containers">
             <div class="details-container">
               <img
-                src="./assets/experience.png"
+                src="./experience.png"
                 alt="Experience icon"
                 class="icon"
               />
@@ -96,7 +96,7 @@
             </div>
             <div class="details-container">
               <img
-                src="./assets/education.png"
+                src="./education.png"
                 alt="Education icon"
                 class="icon"
               />
@@ -117,7 +117,7 @@
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./arrow.png"
         alt="Arrow Icon"
         class="icon arrow"
         onclick="location.href='./#experience'"
@@ -133,7 +133,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -144,7 +144,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -155,7 +155,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -166,7 +166,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -177,7 +177,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -193,7 +193,7 @@
             <div class="article-container">
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -204,7 +204,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -215,7 +215,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -226,7 +226,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -237,7 +237,7 @@
               </article>
               <article>
                 <img
-                  src="./assets/checkmark.png"
+                  src="./checkmark.png"
                   alt="Experience icon"
                   class="icon"
                 />
@@ -251,7 +251,7 @@
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./arrow.png"
         alt="Arrow Icon"
         class="icon arrow"
         onclick="location.href='./#projects'"
@@ -265,7 +265,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/ArduinoPic.jpg"
+                src="./ArduinoPic.jpg"
                 alt="Project 1"
                 class="project-img"
               />
@@ -291,7 +291,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/Song_Generator.png"
+                src="./Song_Generator.png"
                 alt="Project 2"
                 class="project-img"
               />
@@ -317,7 +317,7 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/Song_Generator.png"
+                src="./Song_Generator.png"
                 alt="Project 2"
                 class="project-img"
               />
@@ -341,7 +341,7 @@
         </div>
       </div>
       <img
-        src="./assets/arrow.png"
+        src="./arrow.png"
         alt="Arrow Icon"
         class="icon arrow"
         onclick="location.href='./#contact'"
@@ -353,7 +353,7 @@
       <div class="contact-info-upper-container contact-gap">
         <div class="contact-info-container">
           <img
-            src="./assets/email.png"
+            src="./email.png"
             alt="email icon"
             class="icon contact-icon email-icon"
           />
@@ -363,7 +363,7 @@
         </div>
         <div class="contact-info-container">
           <img
-            src="./assets/linkedin.png"
+            src="./linkedin.png"
             alt="linkedin icon"
             class="icon contact-icon"
           />
