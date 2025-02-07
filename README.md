@@ -110,7 +110,7 @@
             <p>
               I’m a Computer Science student at FIU with experience in programming, 
               data analysis, and digital solutions. I’ve worked on projects involving AI, 
-              machine learning, data analysis, fin-tech, and real-time systems. I’m actively 
+              machine learning, data analysis, Fin-Tech, and real-time systems. I’m actively 
               involved with INIT FIU and their projects focused on ML/AI.
             </p>
           </div>
