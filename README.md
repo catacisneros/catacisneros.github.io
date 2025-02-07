@@ -92,7 +92,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2+ years <br />Software Development</p>
+              <p>2+ years <br />AI, machine learning, data analysis, and cybersecurity</p>
             </div>
             <div class="details-container">
               <img
@@ -102,7 +102,7 @@
               />
               <h3>Education</h3>
               <p>
-                BS in Computer Science
+                Bachelor of Science in Computer Science <br />Graduation 2026
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@
             <p>
               I’m a Computer Science student at FIU with experience in programming, 
               data analysis, and digital solutions. I’ve worked on projects involving AI, 
-              machine learning, data analysis, and real-time systems. I’m actively 
+              machine learning, data analysis, fin-tech, and real-time systems. I’m actively 
               involved with INIT FIU and their projects focused on ML/AI.
             </p>
           </div>
@@ -199,7 +199,7 @@
                 />
                 <div>
                   <h3>Python</h3>
-                  <p>Experienced</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
@@ -221,7 +221,7 @@
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Intermediate</p>
+                  <p>Beginner</p>
                 </div>
               </article>
               <article>
@@ -232,7 +232,7 @@
                 />
                 <div>
                   <h3>Git</h3>
-                  <p>Experienced</p>
+                  <p>Intermediate</p>
                 </div>
               </article>
               <article>
