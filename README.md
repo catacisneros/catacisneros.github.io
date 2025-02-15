@@ -39,7 +39,7 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img width="294" alt="Profile_Pic2" src="https://github.com/user-attachments/assets/0ab7b2ea-75e8-4829-a704-1be5b74ed868" />
+        <img width="294" height="294" alt="Profile_Pic" src="Profile_Pic.png" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello I'm</p>
@@ -58,14 +58,14 @@
         </div>
         <div id="socials-container">
         <img
-            src="https://github.com/user-attachments/assets/63a0e66a-7964-4e57-8d87-3121e5cda3b2"
+            src="linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
             onclick="location.href='https://linkedin.com/in/catalinacisneros'"
           />
           <img
-            src="https://github.com/user-attachments/assets/1428656c-2a6c-42e7-b49f-28b4124d1985"
-            alt="My LinkedIn profile"
+            src="github.png"
+            alt="My Github profile"
             class="icon"
             onclick="location.href='https://github.com/catacisneros'"
           />
@@ -92,7 +92,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2+ years <br />AI, machine learning, data analysis, and cybersecurity</p>
+              <p>AI, machine learning, </br>data analysis, and cybersecurity</p>
             </div>
             <div class="details-container">
               <img
@@ -102,7 +102,7 @@
               />
               <h3>Education</h3>
               <p>
-                Bachelor of Science in Computer Science <br />Graduation 2026
+                B.S. in Computer Science <br />Graduation 2026
               </p>
             </div>
           </div>
@@ -110,7 +110,7 @@
             <p>
               I’m a Computer Science student at FIU with experience in programming, 
               data analysis, and digital solutions. I’ve worked on projects involving AI, 
-              machine learning, data analysis, Fin-Tech, and real-time systems. I’m actively 
+              machine learning, data analysis, and real-time systems. I’m actively 
               involved with INIT FIU and their projects focused on ML/AI.
             </p>
           </div>
@@ -139,7 +139,7 @@
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Intermediate</p>
+                  <p>React.js Next.js</p>
                 </div>
               </article>
               <article>
@@ -150,7 +150,7 @@
                 />
                 <div>
                   <h3>HTML/CSS</h3>
-                  <p>Experienced</p>
+                  <p>WebDev</p>
                 </div>
               </article>
               <article>
@@ -161,7 +161,7 @@
                 />
                 <div>
                   <h3>R</h3>
-                  <p>Intermediate</p>
+                  <p>Data Analysis</p>
                 </div>
               </article>
               <article>
@@ -171,8 +171,8 @@
                   class="icon"
                 />
                 <div>
-                  <h3>Excel</h3>
-                  <p>Experienced</p>
+                  <h3>Swift</h3>
+                  <p>Apple iOS/MacOS Development </p>
                 </div>
               </article>
               <article>
@@ -183,7 +183,7 @@
                 />
                 <div>
                   <h3>SalesForce</h3>
-                  <p>Intermediate</p>
+                  <p>CRM tool</p>
                 </div>
               </article>
             </div>
@@ -199,7 +199,7 @@
                 />
                 <div>
                   <h3>Python</h3>
-                  <p>Intermediate</p>
+                  <p>Pandas, Numpy, TensorFlow, OpenAI</p>
                 </div>
               </article>
               <article>
@@ -210,7 +210,7 @@
                 />
                 <div>
                   <h3>SQL</h3>
-                  <p>Beginner</p>
+                  <p>Database</p>
                 </div>
               </article>
               <article>
@@ -221,7 +221,7 @@
                 />
                 <div>
                   <h3>JavaScript</h3>
-                  <p>Beginner</p>
+                  <p>Express.js</p>
                 </div>
               </article>
               <article>
@@ -232,7 +232,7 @@
                 />
                 <div>
                   <h3>Git</h3>
-                  <p>Intermediate</p>
+                  <p>GitHub</p>
                 </div>
               </article>
               <article>
@@ -243,7 +243,7 @@
                 />
                 <div>
                   <h3>Java</h3>
-                  <p>Intermediate</p>
+                  <p>Object-Oriented programming</p>
                 </div>
               </article>
             </div>
@@ -297,7 +297,7 @@
               />
             </div>
             <h2 class="experience-sub-title project-title">
-              AI Song Generator 
+              AI Song Generator - Lyrique
             </h2>
             <div class="btn-container">
               <button
@@ -308,7 +308,7 @@
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/catacisneros/AI-Song-Generator'"
+                onclick="location.href='https://github.com/catacisneros/Lyrique/'"
               >
                 Learn More
               </button>
