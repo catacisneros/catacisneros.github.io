@@ -3,9 +3,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
-  --primary-color: #2c3e50;
-  --primary-light: #34495e;
-  --text-dark: #2c3e50;
+  --primary-color: #4B3651;
+  --primary-light: #8B6B91;
+  --text-dark: #111;
   --text-light: #555;
 }
 
@@ -132,7 +132,7 @@ a:hover {
   padding: 10px;
   text-align: center;
   font-size: 1.5rem;
-  color: black;
+  color: #111;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
 }
@@ -177,6 +177,7 @@ section {
   margin: 0 10rem;
   margin-bottom: 4rem;
   box-sizing: border-box;
+  line-height: 1.2;
 }
 
 .section-container {
@@ -200,7 +201,7 @@ section {
   gap: 5rem;
   height: 100vh;
   padding-top: 4.5rem;
-  margin-bottom: 0;
+  margin-bottom: 6rem;
   background-color: #fff;
 }
 
@@ -234,20 +235,24 @@ section {
   text-align: center;
   color: var(--primary-color);
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
 }
 
 .section__text__p2 {
   font-size: 1.75rem;
+  margin: 0;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #111;
+  line-height: 1.2;
 }
 
 .title {
   font-size: 3.5rem;
   text-align: center;
-  margin: 1rem 0;
+  margin: 0.3rem 0;
   color: #111;
+  line-height: 1.2;
 }
 
 #socials-container {
@@ -288,7 +293,7 @@ section {
 
 .btn-color-1 {
   background: var(--primary-color);
-  color: white;
+  color: #fff;
 }
 
 .btn-color-2 {
@@ -303,7 +308,7 @@ section {
 
 .btn-color-2:hover {
   background: var(--primary-color);
-  color: white;
+  color: #fff;
 }
 
 /* ABOUT SECTION*/
@@ -367,7 +372,7 @@ section {
 .details-container h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: #111;
 }
 
 .details-container p {
@@ -393,7 +398,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: #111;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -448,16 +453,16 @@ article .icon {
 
 .project-title {
   margin: 1rem;
-  color: black;
+  color: #111;
 }
 
 .project-btn.btn-color-1 {
-  color: white;
+  color: #fff;
   border-color: rgb(163, 163, 163);
 }
 
 .project-btn.btn-color-2 {
-  color: black;
+  color: #111;
   border-color: rgb(163, 163, 163);
 }
 
@@ -563,4 +568,10 @@ footer p {
   .text-container {
     text-align: justify;
   }
+}
+
+.text-container p {
+  color: #555;
+  text-align: right;
+  line-height: 1.6;
 }
