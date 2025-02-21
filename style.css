@@ -411,7 +411,9 @@ section {
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
 }
 
 article {
@@ -439,7 +441,9 @@ article .icon {
 .project-img {
   border-radius: 2rem;
   width: 90%;
-  height: 90%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .project-title {
@@ -447,7 +451,12 @@ article .icon {
   color: black;
 }
 
-.project-btn {
+.project-btn.btn-color-1 {
+  color: white;
+  border-color: rgb(163, 163, 163);
+}
+
+.project-btn.btn-color-2 {
   color: black;
   border-color: rgb(163, 163, 163);
 }
