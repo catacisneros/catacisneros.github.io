@@ -109,9 +109,9 @@
           <div class="text-container">
             <p>
               I’m a Computer Science student at FIU with experience in programming, 
-              data analysis, and digital solutions. I’ve worked on projects involving AI, 
+              data analysis, and digital solutions. I’ve worked on cts involving AI, 
               machine learning, data analysis, and real-time systems. I’m actively 
-              involved with INIT FIU and their projects focused on ML/AI.
+              involved with INIT FIU and their cts focused on ML/AI.
             </p>
           </div>
         </div>
@@ -254,10 +254,10 @@
         src="https://github.com/user-attachments/assets/1c6ef17b-4d10-455f-bfff-b815ffa244d8"
         alt="Arrow Icon"
         class="icon arrow"
-        onclick="location.href='./#projects'"
+        onclick="location.href='./#cts'"
       />
     </section>
-    <section id="projects">
+    <section id="cts">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
@@ -297,18 +297,18 @@
               />
             </div>
             <h2 class="experience-sub-title project-title">
-              AI Song Generator - Lyrique
+              TBA
             </h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/catacisneros/AI-Song-Generator'"
+                onclick="location.href='https://github.com/catacisneros'"
               >
                 GitHub
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/catacisneros/Lyrique/'"
+                onclick="location.href='https://github.com/catacisneros'"
               >
                 Learn More
               </button>
