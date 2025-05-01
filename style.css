@@ -6,7 +6,7 @@
   --primary-color: #4B3651;
   --primary-light: #8B6B91;
   --text-dark: #111;
-  --text-light: #555;
+  --text-light: #111;
 }
 
 * {
@@ -27,7 +27,7 @@ html {
 }
 
 p {
-  color: #555;
+  color: #111;
   font-size: 1.1rem;
 }
 
@@ -182,10 +182,9 @@ section {
 
 .section-container {
   display: flex;
-  gap: 4rem;
-  align-items: center;
+  gap: 2rem;
+  align-items: flex-start;
   justify-content: center;
-  height: auto;
 }
 
 #about .section-container {
@@ -319,15 +318,21 @@ section {
 
 .about-containers {
   display: flex;
-  flex-wrap: wrap;
   gap: 2rem;
   margin: 2rem 0;
-  justify-content: center;
+}
+
+.about-containers.column {
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .about-details-container {
-  justify-content: center;
+  display: flex;
   flex-direction: column;
+  gap: 0.5rem;
+  max-width: 60%;
+  margin-right: 4rem;
 }
 
 .about-containers,
@@ -349,36 +354,34 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
-  flex: 1;
-  min-width: 250px;
-  max-width: 300px;
+  width: 100%;
+  padding: 1rem 1.5rem;
   background: white;
-  border-radius: 2rem;
-  border: 1px solid rgb(163, 163, 163);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.details-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.details-container img {
-  margin-bottom: 1rem;
+  border: 0.1rem solid rgb(163, 163, 163);
+  border-radius: 1rem;
+  text-align: left;
+  margin: 0.25rem 0;
 }
 
 .details-container h3 {
+  color: var(--primary-color);
+  margin-bottom: 0;
   font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #111;
 }
 
 .details-container p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: #555;
+  margin: 0.25rem 0;
+  line-height: 1.4;
+  color: var(--text-light);
+}
+
+.details-container:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.icon {
+  display: none;
 }
 
 #about .section__pic-container {
@@ -412,12 +415,8 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 2.5rem;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
   height: 350px;
 }
 
@@ -449,11 +448,15 @@ article .icon {
   height: 300px;
   object-fit: cover;
   object-position: center;
+  margin: 0 auto;
 }
 
 .project-title {
   margin: 1rem;
   color: #111;
+  text-align: justify;
+  width: 100%;
+  padding: 0 2rem;
 }
 
 .project-btn.btn-color-1 {
@@ -478,32 +481,57 @@ article .icon {
 .contact-info-upper-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
   margin: 2rem auto;
-  padding: 0.5rem;
+  padding: 2rem;
+  max-width: 800px;
 }
 
 .contact-info-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 1rem;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  object-fit: contain;
 }
 
 .contact-info-container p {
-  font-size: larger;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.cotact-icon {
-  cursor: default;
+.contact-info-container a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.email-icon {
-  height: 2.4rem;
+.contact-info-container:hover {
+  background: rgba(75, 54, 81, 0.1);
+}
+
+.contact-info-container:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-info-container:hover a {
+  color: var(--primary-color);
 }
 
 /* FOOTER SECTION */
@@ -571,7 +599,142 @@ footer p {
 }
 
 .text-container p {
-  color: #555;
+  color: #111;
   text-align: right;
   line-height: 1.6;
+}
+
+/* Adjust spacing after the title in the About section */
+#about .title {
+  margin-bottom: 3rem;
+}
+
+/* Keep the existing spacing between boxes */
+.about-details-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 60%;
+  margin-right: 4rem;
+}
+
+.title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  opacity: 0.8;
+}
+
+/* Update existing styles */
+.details-container h3 {
+  color: var(--primary-color);
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+/* Ensure icons maintain their color in dark mode if needed */
+.section-icon {
+  filter: brightness(0.8);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contact-info-upper-container {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .contact-info-container {
+    width: 100%;
+    justify-content: center;
+    padding: 0.75rem;
+  }
+
+  .contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .contact-info-container p {
+    font-size: 1rem;
+  }
+}
+
+/* Ensure buttons stay centered on mobile */
+@media screen and (max-width: 600px) {
+  .project-title {
+    font-size: 1.25rem;
+    padding: 0 1rem;
+    margin: 0.75rem;
+  }
+  
+  .details-container.color-container {
+    padding: 1rem;
+  }
+}
+
+.details-container.color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: rgb(250, 250, 250);
+  border-color: rgb(163, 163, 163);
+}
+
+/* Image container */
+.article-container {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Project image */
+.project-img {
+  width: 90%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 2rem;
+}
+
+/* Project title */
+.experience-sub-title.project-title {
+  width: 90%;  /* Match image width */
+  text-align: center;
+  margin: 1rem auto;  /* Center with auto margins */
+  padding: 0;
+  color: #111;
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+
+/* Button container */
+.btn-container {
+  width: 90%;  /* Match image and title width */
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  .experience-sub-title.project-title {
+    font-size: 1.25rem;
+    width: 95%;  /* Slightly wider on mobile */
+  }
+  
+  .project-img,
+  .btn-container {
+    width: 95%;  /* Match title width on mobile */
+  }
 }
