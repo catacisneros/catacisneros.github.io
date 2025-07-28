@@ -81,12 +81,13 @@ a:hover {
 .logo {
   font-size: 1.75rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #888;
+  cursor: pointer;
+  transition: color 300ms ease;
 }
 
 .logo:hover {
-  cursor: pointer;
-  opacity: 0.9;
+  color: var(--primary-color);
 }
 
 /* HAMBURGER MENU */
