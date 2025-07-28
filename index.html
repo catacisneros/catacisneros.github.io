@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <meta name="description" content="Portfolio website of Catalina Cisneros - Cybersecurity, Machine Learning, and Quantum Computing">
+    <link rel="icon" type="image/png" href="Pfp_no.JPG" />
+    <meta property="og:title" content="Catalina Cisneros - Cybersecurity Tech Fellow" />
+    <meta property="og:description" content="Portfolio of Catalina Cisneros, Cybersecurity Tech Fellow at CodePath, Computer Science at FIU, passionate about cybersecurity, AI, and teaching." />
+    <meta property="og:image" content="Pfp_no.JPG" />
+    <meta property="og:url" content="https://catacisneros.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -39,14 +45,14 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="IMG_5358.JPG" alt="Catalina Cisneros profile picture" />
+        <img src="IMG_5358.JPG" srcset="IMG_5358.JPG 1x, Pfp_no.JPG 2x" alt="Catalina Cisneros profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Catalina Cisneros</h1>
-        <p class="section__text__p2">Cybersecurity & Quantum Computing Enthusiast</p>
+        <p class="section__text__p2">Computer Science, Physics, and Cybersecurity</p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('Catalina-Cisneros-CV.pdf')">
+          <button class="btn btn-color-2" onclick="window.open('Catalina Cisneros CV.pdf')">
             Download CV
           </button>
           <button class="btn btn-color-1" onclick="location.href='#contact'">
@@ -72,42 +78,59 @@
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img src="IMG_5701.JPG" alt="Profile picture" class="about-pic" />
-        </div>
-        <div class="about-details-container">
-          <div class="details-container education-block">
-            <div class="title-with-icon">
-              <img src="graduation-cap.png" alt="Education icon" class="section-icon" />
-              <h3>Education</h3>
-            </div>
-            <p>
-              B.S. Computer Science + Minor in Physics<br/>
-              Florida International University<br/>
-              Expected 2026
-            </p>
-          </div>
-          
-          <div class="details-container experience-block">
+       <div class="section-container about-clean">
+        <div class="about-main-col">
+          <div class="about-card">
             <div class="title-with-icon">
               <img src="building.png" alt="Experience icon" class="section-icon" />
               <h3>Experience</h3>
             </div>
-            <h4>Amerant Bank</h4> <p>2024-2025</p>
-            <p>
-              I integrated secure digital platform automation through Salesforce, analyzed data with Power BI, and ensured cybersecurity compliance for 2,000+ international clients through KYC automation.
-            </p>
+            <div class="exp-job">
+              <h4>CodePath</h4>
+              <span class="exp-role">Tech Fellow - Intermediate Cybersecurity Certification</span>
+              <span class="exp-date">May 2025 - Present</span>
+              <ul>
+                <li>Support student learning Intermediate Cybersecurity by leading breakout rooms and clarifying complex topics like threat modeling and network defense</li>
+                <li>Answer technical questions on secure systems, network monitoring, and attack mitigation</li>
+                <li>Collaborate with CodePath staff to enhance teaching strategies and mentor a diverse student cohort</li>
+              </ul>
+            </div>
+            <div class="exp-job">
+              <h4>Amerant Bank</h4>
+              <span class="exp-role">Digital Business Enabler & Client Service Associate</span>
+              <span class="exp-date">Oct 2023 - Dec 2024</span>
+              <ul>
+                <li>Integrated secure digital tools to streamline operations and improve client response time by ~30%</li>
+                <li>Automated Salesforce CRM workflows for sensitive data, reducing manual errors, increasing efficiency</li>
+                <li>Used Power BI to detect security risks and trends, contributing to faster mitigation strategies and improved compliance</li>
+                <li>Ensured cybersecurity compliance for 2,000+ international clients through KYC automation</li>
+              </ul>
+            </div>
           </div>
-
-          <div class="details-container certification-block">
+        </div>
+        <div class="about-side-col">
+          <div class="about-card">
             <div class="title-with-icon">
               <img src="badge-check.png" alt="Certification icon" class="section-icon" />
               <h3>Certifications</h3>
             </div>
-            <p>
-              CodePath Cybersecurity Certificate CYB102<br/>
-            </p>
+            <ul>
+              <li>CodePath Intermediate Cybersecurity Certification (CYB102)</li>
+              <li>Leadership Certification, Dale Carnegie Training</li>
+            </ul>
+          </div>
+          <div class="about-card">
+            <div class="title-with-icon">
+              <img src="code.png" alt="Skills icon" class="section-icon" />
+              <h3>Top Skills</h3>
+            </div>
+            <ul>
+              <li>Cybersecurity</li>
+              <li>Problem Solving</li>
+              <li>Leadership</li>
+              <li>Security Information and Event Management (SIEM)</li>
+              <li>Programming Languages</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -123,31 +146,31 @@
               <img src="code.png" alt="Programming Languages icon" class="section-icon" />
               <h3>Languages</h3>
             </div>
-            <p>Python, SQL, Java, C/C++, R, JavaScript, HTML/CSS</p>
+            <p>Python, Java, SQL, C/C++, R, JavaScript, HTML/CSS</p>
           </div>
           
           <div class="details-container">
             <div class="title-with-icon">
               <img src="laptop.png" alt="Hardware icon" class="section-icon" />
-              <h3>Technologies</h3>
+              <h3>Hardware</h3>
             </div>
-            <p>Arduino UNO, Raspberry Pi</p>
+            <p>Raspberry Pi, Arduino UNO</p>
           </div>
 
           <div class="details-container">
             <div class="title-with-icon">
               <img src="chart-histogram.png" alt="Business Tools icon" class="section-icon" />
-              <h3>Business Tools</h3>
+              <h3>Cloud & Data Tools</h3>
             </div>
-            <p>Salesforce, Power BI, Data Analysis, Git, AWS</p>
+            <p>Salesforce, Power BI, Git, AWS, Data Analysis</p>
           </div>
 
           <div class="details-container">
             <div class="title-with-icon">
               <img src="terminal.png" alt="Security Tools icon" class="section-icon" />
-              <h3>Cybersecurity</h3>
+              <h3>Cybersecurity Tools</h3>
             </div>
-            <p>Wireshark, Splunk, VirusTotal CLI, John the Ripper, Snort, Slowloris</p>
+            <p>Wireshark, Splunk, VirusTotal CLI, Snort, Slowloris</p>
           </div>
         </div>
       </div>
@@ -155,14 +178,15 @@
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h1 class="title">Selected Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container color-container">
             <div class="article-container">
               <img src="DashboardIoT.png" alt="Project 1" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">IoT Security Dashboard</h2>
+            <h2 class="experience-sub-title project-title">IoT Security Dashboard (Python) - WIP</h2>
+            <p class="project-description">Build a dashboard to monitor autogenerated IoT data, detect anomalies, and display security metrics.</p>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/catacisneros/IoT_Security_Dashboard')">
                 Github
@@ -176,26 +200,43 @@
             <div class="article-container">
               <img src="ArduinoPic.jpg" alt="Project 2" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Arduino Real-Time GPS Tracker</h2>
+            <h2 class="experience-sub-title project-title">Advanced Keylogger (Python) - WIP</h2>
+            <p class="project-description">Developing a proof-of-concept keylogger to analyze threat behavior and test mitigation strategies.</p>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/catacisneros/Arduino-GPS-Code')">
+              <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/catacisneros')">
                 Github
               </button>
-              <button class="btn btn-color-1 project-btn" onclick="window.open('https://github.com/catacisneros/Arduino-GPS-Code')">
+              <button class="btn btn-color-1 project-btn" onclick="window.open('https://github.com/catacisneros')">
                 Live Demo
               </button>
             </div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
-              <img src="Song_Generator.png" alt="Project 3" class="project-img" />
+              <img src="Cafeteria_Map_Java.png" alt="Project 4" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Lyrique - AI Song Generator</h2>
+            <h2 class="experience-sub-title project-title">8 Puzzle Project (HTML/CSS/JS)</h2>
+            <p class="project-description">Implemented the classic 8-puzzle game using AI search algorithms to explore state space and solve efficiently.</p>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/akayangel128/Lyrique')">
+              <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/catacisneros')">
                 Github
               </button>
-              <button class="btn btn-color-1 project-btn" onclick="window.open('https://github.com/akayangel128/Lyrique')">
+              <button class="btn btn-color-1 project-btn" onclick="window.open('https://github.com/catacisneros')">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="code.png" alt="Project 5" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Tic Tac Toe (HTML/CSS/JS)</h2>
+            <p class="project-description">Created a logic-based game with simple AI for win detection, move validation, and basic strategy.</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/catacisneros')">
+                Github
+              </button>
+              <button class="btn btn-color-1 project-btn" onclick="window.open('https://github.com/catacisneros')">
                 Live Demo
               </button>
             </div>
@@ -213,6 +254,13 @@
           <img src="email.png" alt="Email icon" class="contact-icon" 
                onclick="window.location.href='mailto:cmcr2002@gmail.com'" />
           <p><a href="mailto:cmcr2002@gmail.com">cmcr2002@gmail.com</a></p>
+        </div>
+        
+        <!-- Phone -->
+        <div class="contact-info-container">
+          <img src="email.png" alt="Phone icon" class="contact-icon" 
+               onclick="window.location.href='tel:+13058749475'" />
+          <p><a href="tel:+13058749475">(305) 874-9475</a></p>
         </div>
         
         <!-- LinkedIn -->
@@ -239,8 +287,8 @@
         <!-- CV Download -->
         <div class="contact-info-container">
           <img src="folder-download.png" alt="CV icon" class="contact-icon"
-               onclick="window.open('CV - Catalina Cisneros.pdf')" />
-          <p><a href="Catalina-Cisneros-CV.pdf" download>Download CV</a></p>
+               onclick="window.open('Catalina Cisneros CV.pdf')" />
+          <p><a href="Catalina Cisneros CV.pdf" download>Download CV</a></p>
         </div>
       </div>
     </section>

@@ -3,8 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
-  --primary-color: #4B3651;
-  --primary-light: #8B6B91;
+  --primary-color: #6EC1E4;
+  --primary-light: #AEE6FA;
   --text-dark: #111;
   --text-light: #111;
 }
@@ -246,6 +246,13 @@ section {
   line-height: 1.2;
 }
 
+.section__text__p3 {
+  text-align: center;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
 .title {
   font-size: 3.5rem;
   text-align: center;
@@ -467,6 +474,13 @@ article .icon {
 .project-btn.btn-color-2 {
   color: #111;
   border-color: rgb(163, 163, 163);
+}
+
+.project-description {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem 0;
+  line-height: 1.4;
 }
 
 /* CONTACT */
@@ -736,5 +750,95 @@ footer p {
   .project-img,
   .btn-container {
     width: 95%;  /* Match title width on mobile */
+  }
+}
+
+/* --- About Section Clean Layout --- */
+.about-clean {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.about-main-col {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about-side-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.about-card {
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 2px 16px rgba(110, 193, 228, 0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  margin-bottom: 0;
+  border: 1px solid #e3f3fa;
+}
+.about-card ul {
+  margin: 0.5rem 0 0 1.25rem;
+  padding: 0;
+  list-style: disc inside;
+}
+.about-card li {
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  color: #222;
+}
+.exp-job {
+  margin-bottom: 1.5rem;
+}
+.exp-job h4 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.15rem;
+  color: var(--primary-color);
+}
+.exp-role {
+  display: block;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.1rem;
+}
+.exp-date {
+  display: block;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+.summary-card {
+  margin: 2rem 0 0 0;
+}
+@media (max-width: 900px) {
+  .about-clean {
+    flex-direction: column;
+  }
+  .about-main-col, .about-side-col {
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .about-card {
+    padding: 1.25rem 1rem;
+  }
+}
+
+.about-summary-text {
+  font-size: 1.25rem;
+  color: #444;
+  text-align: center;
+  margin: 1.5rem auto 3rem auto;
+  max-width: 800px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+@media (max-width: 900px) {
+  .about-summary-text {
+    font-size: 1.1rem;
+    margin: 1rem auto 2rem auto;
+    padding: 0 1rem;
   }
 }
