@@ -149,7 +149,7 @@ const Portfolio = () => {
       "I Study Computer Science and Physics at FIU",
       "Certifications: CompTIA Security+",
       "Currently a Tech Fellow at CodePath",
-      "pip install <a href='https://catacisneros.github.io/Catalina_Cisneros_Resume.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'> my resume </a>",
+      "pip install <a href='Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>my resume</a>",
       "git push origin career_goals",
       "echo '<a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' class='text-green-600 hover:text-green-200 hover:text-green-200 hover:underline'>Send me an email</a>'",
       "Recruiter ping received...responding immediately",
@@ -289,7 +289,7 @@ const Portfolio = () => {
             </a>
             
             <button
-              onClick={() => window.open('Catalina Cisneros CV - NOPP.pdf')}
+              onClick={() => window.open('/Catalina Cisneros 1.pdf', '_blank')}
               className="text-green-400 hover:text-white transition-colors"
             >
               <FileDown className="w-6 h-6 hover:animate-pulse" />
