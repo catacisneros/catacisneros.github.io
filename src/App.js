@@ -11,7 +11,7 @@ const projects = [
   {
     id: 1,
     title: 'IoT Security Dashboard',
-    image: 'https://via.placeholder.com/400x250/00ff00/000000?text=Project+4',
+    image: process.env.PUBLIC_URL + '/DashboardIoT.png',
     description: 'Simulated SOC dashboard to track and monitor IoT devices. Designed to show device status, security alerts, and analytics.',
     languages: ['Python', 'React (JS)', 'FastAPI', 'WireShark'],
     githubUrl: 'https://github.com/catacisneros/IoT_Security_Dashboard',
@@ -20,7 +20,7 @@ const projects = [
   {
     id: 2,
     title: 'Advanced Keylogger PoC ',
-    image: 'https://via.placeholder.com/400x250/00ff00/000000?text=Project+2',
+    image: process.env.PUBLIC_URL + '/Keylogger_Temp.png',
     description: 'Records keystrokes with timestamps, handles regular and special keys, and logs to a text file for easy review.',
     languages: ['Python', 'pynput', 'React (JS)', 'FastAPI'],
     githubUrl: 'https://github.com/catacisneros/Advanced-Keylogger',
@@ -29,7 +29,7 @@ const projects = [
   {
     id: 3,
     title: '8-Puzzle Game',
-    image: 'https://via.placeholder.com/400x250/00ff00/000000?text=Project+3',
+    image: process.env.PUBLIC_URL + '/puzzle.png',
     description: 'Interactive 8-puzzle game with an A* algorithm solver. The game allows users to upload their own images.',
     languages: ['Python', 'A* Algorithm'],
     githubUrl: 'https://github.com/catacisneros/8puzzle_project',
@@ -38,7 +38,7 @@ const projects = [
   {
     id: 4,
     title: 'TCP Socket Server',
-    image: 'https://via.placeholder.com/400x250/00ff00/000000?text=Project+1',
+    image: process.env.PUBLIC_URL + '/ArduinoPic.jpg',
     description: 'FTP client-server system that uses TCP sockets to enable authentication, file transfer, and directory management in passive mode, following the RFC 959 protocol standard.',
     languages: ['Python', 'Network'],
     githubUrl: 'https://github.com/catacisneros/IoT_Security_Dashboard',
@@ -47,48 +47,58 @@ const projects = [
   
 ];
 
-// Array of other projects - simpler format with just name, description, languages, and GitHub
-const otherProjects = [
+// Array of Applied Physics & Data Analysis projects
+const appliedPhysicsProjects = [
   {
     id: 1,
-    name: 'Other Project 1',
-    description: 'A brief description of another project.',
-    languages: ['Python', 'Flask'],
+    name: 'Light Matters',
+    reportUrl: '#',
     githubUrl: 'https://github.com/catacisneros'
   },
   {
     id: 2,
-    name: 'Other Project 2',
-    description: 'A brief description of another project.',
-    languages: ['JavaScript', 'Express'],
+    name: 'Hot Data',
+    reportUrl: '#',
     githubUrl: 'https://github.com/catacisneros'
   },
   {
     id: 3,
-    name: 'Other Project 3',
-    description: 'A brief description of another project.',
-    languages: ['C++', 'Qt'],
+    name: 'Electric Identities',
+    reportUrl: '#',
     githubUrl: 'https://github.com/catacisneros'
   },
   {
     id: 4,
-    name: 'Other Project 4',
-    description: 'A brief description of another project.',
-    languages: ['Ruby', 'Rails'],
+    name: 'Scatterbrain',
+    reportUrl: '#',
+    githubUrl: 'https://github.com/catacisneros'
+  }
+];
+
+// Array of Other projects
+const otherProjects = [
+  {
+    id: 1,
+    name: 'Supermarket',
+    reportUrl: '#',
     githubUrl: 'https://github.com/catacisneros'
   },
   {
-    id: 5,
-    name: 'Other Project 5',
-    description: 'A brief description of another project.',
-    languages: ['Go', 'Gin'],
+    id: 2,
+    name: 'Tik tak toe',
+    reportUrl: '#',
     githubUrl: 'https://github.com/catacisneros'
   },
   {
-    id: 6,
-    name: 'Other Project 6',
-    description: 'A brief description of another project.',
-    languages: ['PHP', 'Laravel'],
+    id: 3,
+    name: 'Cafeteria map plan',
+    reportUrl: '#',
+    githubUrl: 'https://github.com/catacisneros'
+  },
+  {
+    id: 4,
+    name: 'Arduino GPS',
+    reportUrl: '#',
     githubUrl: 'https://github.com/catacisneros'
   }
 ];
@@ -145,11 +155,11 @@ const Portfolio = () => {
   // Returns a response message based on how many commands the user has entered
   const getTerminalResponse = () => {
     const messages = [
-      "This is my CV: <a href='https://linkedin.com/in/catalinacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>Catalina Cisneros</a>",
+      "This is my CV: <a href='/Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>Catalina Cisneros</a>",
       "I Study Computer Science and Physics at FIU",
       "Certifications: CompTIA Security+",
       "Currently a Tech Fellow at CodePath",
-      "pip install <a href='Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>my resume</a>",
+      "pip install <a href='/Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>my resume</a>",
       "git push origin career_goals",
       "echo '<a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' class='text-green-600 hover:text-green-200 hover:text-green-200 hover:underline'>Send me an email</a>'",
       "Recruiter ping received...responding immediately",
@@ -289,7 +299,10 @@ const Portfolio = () => {
             </a>
             
             <button
-              onClick={() => window.open('/Catalina Cisneros 1.pdf', '_blank')}
+              onClick={() => {
+                const url = process.env.PUBLIC_URL + '/Catalina Cisneros 1.pdf';
+                window.open(encodeURI(url), '_blank', 'noopener,noreferrer');
+              }}
               className="text-green-400 hover:text-white transition-colors"
             >
               <FileDown className="w-6 h-6 hover:animate-pulse" />
@@ -410,6 +423,115 @@ const Portfolio = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Additional Projects Section - Two column layout */}
+      <section id="additional-projects" className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Container */}
+          <div className="p-6 md:p-8">
+            {/* Two column layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+              {/* Left Column - Applied Physics & Data Analysis */}
+              <div className="space-y-4 pr-4 md:pr-6 border-r-0 md:border-r-2 border-green-500">
+                {/* Section Title */}
+                <div className="border border-dashed border-green-500 rounded px-4 py-2 bg-gray-900">
+                  <h3 className="text-green-400 font-bold text-lg md:text-xl text-center">
+                    Applied Physics & Data Analysis
+                  </h3>
+                </div>
+                
+                {/* Projects List */}
+                <div className="space-y-3">
+                  {appliedPhysicsProjects.map((project) => (
+                    <div key={project.id} className="flex items-center gap-3">
+                      {/* Project Name Box */}
+                      <div className="flex-1 bg-gray-900 border border-green-500 rounded px-3 py-2">
+                        <span className="text-gray-300 font-mono text-sm md:text-base">
+                          {project.name}
+                        </span>
+                      </div>
+                      
+                      {/* Two Circular Icons */}
+                      <div className="flex gap-2">
+                        {/* Report/Demo Link Icon */}
+                        <a
+                          href={project.reportUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
+                          title="Link to report"
+                        >
+                          <ExternalLink className="w-5 h-5 text-green-400" />
+                        </a>
+                        
+                        {/* GitHub Link Icon */}
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
+                          title="Link to GitHub"
+                        >
+                          <Github className="w-5 h-5 text-green-400" />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              {/* Right Column - Other projects */}
+              <div className="space-y-4 pl-4 md:pl-6">
+                {/* Section Title */}
+                <div className="border border-dashed border-green-500 rounded px-4 py-2 bg-gray-900">
+                  <h3 className="text-green-400 font-bold text-lg md:text-xl text-center">
+                    Other projects
+                  </h3>
+                </div>
+                
+                {/* Projects List */}
+                <div className="space-y-3">
+                  {otherProjects.map((project) => (
+                    <div key={project.id} className="flex items-center gap-3">
+                      {/* Project Name Box */}
+                      <div className="flex-1 bg-gray-900 border border-green-500 rounded px-3 py-2">
+                        <span className="text-gray-300 font-mono text-sm md:text-base">
+                          {project.name}
+                        </span>
+                      </div>
+                      
+                      {/* Two Circular Icons */}
+                      <div className="flex gap-2">
+                        {/* Report/Demo Link Icon */}
+                        <a
+                          href={project.reportUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
+                          title="Link to report"
+                        >
+                          <ExternalLink className="w-5 h-5 text-green-400" />
+                        </a>
+                        
+                        {/* GitHub Link Icon */}
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
+                          title="Link to GitHub"
+                        >
+                          <Github className="w-5 h-5 text-green-400" />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
