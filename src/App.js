@@ -15,7 +15,7 @@ const projects = [
     description: 'Simulated SOC dashboard to track and monitor IoT devices. Designed to show device status, security alerts, and analytics.',
     languages: ['Python', 'React (JS)', 'FastAPI', 'WireShark'],
     githubUrl: 'https://github.com/catacisneros/IoT_Security_Dashboard',
-    demoUrl: 'https://www.youtube.com/@cataciso'
+    demoUrl: 'https://www.youtube.com/@catacis'
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const projects = [
     image: process.env.PUBLIC_URL + '/ArduinoPic.jpg',
     description: 'FTP client-server system that uses TCP sockets to enable authentication, file transfer, and directory management in passive mode, following the RFC 959 protocol standard.',
     languages: ['Python', 'Network'],
-    githubUrl: 'https://github.com/catacisneros/IoT_Security_Dashboard',
+    githubUrl: 'https://github.com/catacisneros/TCP_Socket_Server',
     demoUrl: 'https://www.youtube.com/@catacis'
   }
   
@@ -51,27 +51,27 @@ const projects = [
 const appliedPhysicsProjects = [
   {
     id: 1,
-    name: 'Light Matters',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    name: 'Calculating the Speed of Light',
+    reportUrl: 'https://github.com/catacisneros/Speed-of-Light/blob/main/Speed%20of%20Light.pdf',
+    githubUrl: 'https://github.com/catacisneros/Speed-of-Light'
   },
   {
     id: 2,
-    name: 'Hot Data',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    name: 'X-ray diffraction through a NaCl crystal.',
+    reportUrl: 'https://github.com/catacisneros/X-Ray/blob/main/X-Ray.pdf',
+    githubUrl: 'https://github.com/catacisneros/X-Ray'
   },
   {
     id: 3,
-    name: 'Electric Identities',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    name: 'Electron\'s Charge-to-Mass Ratio',
+    reportUrl: 'https://github.com/catacisneros/EM-Ratio/blob/main/EM%20Ratio%20Lab%20Report.pdf',
+    githubUrl: 'https://github.com/catacisneros/EM-Ratio'
   },
   {
     id: 4,
-    name: 'Scatterbrain',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    name: 'Planck\'s constant (Photoelectric Effect)',
+    reportUrl: 'https://github.com/catacisneros/Photoelectric-Effect/blob/main/Photoelectric%20effect%20Lab%20Report.pdf',
+    githubUrl: 'https://github.com/catacisneros/Photoelectric-Effect'
   }
 ];
 
@@ -81,25 +81,25 @@ const otherProjects = [
     id: 1,
     name: 'Supermarket',
     reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    githubUrl: 'https://github.com/catacisneros/Supermarket'
   },
   {
     id: 2,
     name: 'Tik tak toe',
     reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    githubUrl: 'https://github.com/catacisneros/tic_tac_toe'
   },
   {
     id: 3,
     name: 'Cafeteria map plan',
     reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    githubUrl: 'https://github.com/catacisneros/Cafeteria_Map_Java'
   },
   {
     id: 4,
     name: 'Arduino GPS',
     reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros'
+    githubUrl: 'https://github.com/catacisneros/Arduino-GPS-Code'
   }
 ];
 
