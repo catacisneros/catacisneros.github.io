@@ -10,12 +10,12 @@ const projects = [
   
   {
     id: 1,
-    title: 'IoT Security Dashboard',
-    image: process.env.PUBLIC_URL + '/DashboardIoT.png',
-    description: 'Simulated SOC dashboard to track and monitor IoT devices. Designed to show device status, security alerts, and analytics.',
-    languages: ['Python', 'React (JS)', 'FastAPI', 'WireShark'],
-    githubUrl: 'https://github.com/catacisneros/IoT_Security_Dashboard',
-    demoUrl: 'https://www.youtube.com/@catacis'
+    title: 'RSA Encrypted Client-Server Communication',
+    image: process.env.PUBLIC_URL + '/RSA_Encryption.png',
+    description: 'Secure messaging system implementing RSA-1024 encryption with SHA256 integrity verification. Features dual-socket architecture, PKCS1_OAEP padding, and secure key exchange protocol.',
+    languages: ['Python', 'PyCryptodome', 'Socket Programming', 'RSA/SHA256'],
+    githubUrl: 'https://github.com/catacisneros/cryptography',
+    demoUrl: 'https://www.youtube.com/watch?v=_WXbKPG8QiM&t=6s'
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projects = [
     image: process.env.PUBLIC_URL + '/Keylogger_Temp.png',
     description: 'Records keystrokes with timestamps, handles regular and special keys, and logs to a text file for easy review.',
     languages: ['Python', 'pynput', 'React (JS)', 'FastAPI'],
-    githubUrl: 'https://github.com/catacisneros/Advanced-Keylogger',
+    githubUrl: 'https://github.com/catacisneros/Keylogger',
     demoUrl: 'https://www.youtube.com/@catacis'
   },
   {
@@ -51,57 +51,54 @@ const projects = [
 const appliedPhysicsProjects = [
   {
     id: 1,
-    name: 'Calculating the Speed of Light',
-    reportUrl: 'https://github.com/catacisneros/Speed-of-Light/blob/main/Speed%20of%20Light.pdf',
-    githubUrl: 'https://github.com/catacisneros/Speed-of-Light'
+    name: 'Compton Scattering with Scintillation Detector',
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/Compton_Scattering/Compton%20Scattering.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/Compton_Scattering'
   },
   {
     id: 2,
-    name: 'X-ray diffraction through a NaCl crystal.',
-    reportUrl: 'https://github.com/catacisneros/X-Ray/blob/main/X-Ray.pdf',
-    githubUrl: 'https://github.com/catacisneros/X-Ray'
+    name: 'Geiger-Mueller tube counting statistics',
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/Counting_Statistics/Lab%20Report%20.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/Counting_Statistics'
   },
   {
     id: 3,
     name: 'Electron\'s Charge-to-Mass Ratio',
-    reportUrl: 'https://github.com/catacisneros/EM-Ratio/blob/main/EM%20Ratio%20Lab%20Report.pdf',
-    githubUrl: 'https://github.com/catacisneros/EM-Ratio'
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/EM_Ratio/EM%20Ratio%20Lab%20Report.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/EM_Ratio'
   },
   {
     id: 4,
-    name: 'Planck\'s constant (Photoelectric Effect)',
-    reportUrl: 'https://github.com/catacisneros/Photoelectric-Effect/blob/main/Photoelectric%20effect%20Lab%20Report.pdf',
-    githubUrl: 'https://github.com/catacisneros/Photoelectric-Effect'
+    name: 'Hydrogen Spectrum using Balmer\'s formula and Rydberg constant',
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/Hydrogen_Spectrum/Hydrogen%20spectrum.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/Hydrogen_Spectrum'
+  },
+  {
+    id: 5,
+    name: 'Verify Einstein\'s photoelectric equation and determine Planck\'s constant',
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/Photoelectric_Effect/Photoelectric%20effect%20Lab%20Report.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/Photoelectric_Effect'
+  },
+  {
+    id: 6,
+    name: 'Calculating the Speed of Light using a laser and a photomultiplier tube',
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/Speed_of_Light/Speed%20of%20Light.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/Speed_of_Light'
+  },
+  {
+    id: 7,
+    name: 'Double-Slit Interference Thomas Young Experiment',
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/Two_Slit_Interference/Double-Slit-Interference.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/Two_Slit_Interference'
+  },
+  {
+    id: 8,
+    name: 'X-ray diffraction through a NaCl crystal.',
+    reportUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/blob/main/X_Ray/X-Ray.pdf',
+    githubUrl: 'https://github.com/catacisneros/PHY3802L_Fall2025/tree/main/X_Ray'
   }
 ];
 
-// Array of Other projects
-const otherProjects = [
-  {
-    id: 1,
-    name: 'Supermarket',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros/Supermarket'
-  },
-  {
-    id: 2,
-    name: 'Tik tak toe',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros/tic_tac_toe'
-  },
-  {
-    id: 3,
-    name: 'Cafeteria map plan',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros/Cafeteria_Map_Java'
-  },
-  {
-    id: 4,
-    name: 'Arduino GPS',
-    reportUrl: '#',
-    githubUrl: 'https://github.com/catacisneros/Arduino-GPS-Code'
-  }
-];
 
 // Main Portfolio component
 const Portfolio = () => {
@@ -155,21 +152,29 @@ const Portfolio = () => {
   // Returns a response message based on how many commands the user has entered
   const getTerminalResponse = () => {
     const messages = [
-      "This is my CV: <a href='/Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>Catalina Cisneros</a>",
-      "I Study Computer Science and Physics at FIU",
-      "Certifications: CompTIA Security+",
-      "Currently a Tech Fellow at CodePath",
+      "Now streaming: cybersecurity explained simply in Spanish on <a href='https://tiktok.com/@catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>TikTok</a>",
+      "Breaking down complex security concepts, no gatekeeping, no fluff",
+      "Watch me explain the basics of cybersecurity in Spanish on <a href='https://tiktok.com/@catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>TikTok</a>",
+      "This is my CV → <a href='/Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>Catalina Cisneros</a>",
+      "Computer Science major with a Physics minor",
+      "Cybersecurity focused | CompTIA Security+ certified",
+      "Currently mentoring future security engineers as a Tech Fellow at CodePath",
+      "",
       "pip install <a href='/Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>my resume</a>",
-      "git push origin career_goals",
-      "echo '<a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' class='text-green-600 hover:text-green-200 hover:text-green-200 hover:underline'>Send me an email</a>'",
-      "Recruiter ping received...responding immediately",
-      "FYI, I'm latina... you're welcome",
-      "Oh! Don't forget to follow me on <a href='https://tiktok.com/@catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>TikTok</a>",
-      "And connect with me on <a href='https://linkedin.com/in/catalinacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>LinkedIn</a>",
-      "And check out my <a href='https://github.com/catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>GitHub</a>",
-      "Follow or you'll wonder why you didn't...",
-       "Anyway, if you're still here, <a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' class='text-green-600 hover:text-green-200 hover:underline'>click</a>",
-       "<a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' class='text-green-600 hover:text-green-200 underline'>click</a>",
+      "git push origin security_career",
+      "",
+      "echo '<a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0A%0ABest%2C%0A[Your%20Name]' class='text-green-600 hover:text-green-200 hover:underline'>let’s talk</a>'",
+      "",
+      "Incoming recruiter ping detected",
+      "Response status: online",
+      "",
+      "Latina in tech | building, teaching, and shipping",
+      "Connect professionally on <a href='https://linkedin.com/in/catalinacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>LinkedIn</a>",
+      "Browse my projects on <a href='https://github.com/catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>GitHub</a>",
+      "",
+      "Warning: following may upgrade your threat model",
+      "EOF"
+
     ];
     return messages[Math.min(commandCount, messages.length - 1)];
   };
@@ -311,7 +316,7 @@ const Portfolio = () => {
           
           <p className="text-xs text-gray-600">
             I promise I'm friendly, <br/>{' '}
-                <a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' target='_blank' className='text-gray-600 hover:text-gray-200 underline'>please hire me</a>
+                <a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' target='_blank' rel='noreferrer' className='text-gray-600 hover:text-gray-200 underline'> send me an email :) </a>
           </p>
         </div>
       </section>
@@ -321,6 +326,20 @@ const Portfolio = () => {
       {/* Terminal Section - Interactive command-line interface */}
       <section id="terminal-section" className="pt-0 pb-16 px-4 mt-0">
         <div className="max-w-4xl mx-auto text-center space-y-6">
+          {/* Tip bubble encouraging users to type */}
+          {commandCount === 0 && (
+            <div className="relative max-w-4xl mx-auto mb-4 animate-pulse">
+              <div className="bg-green-900/80 border border-green-500 rounded-lg px-4 py-3 text-left">
+                <p className="text-green-300 text-sm font-mono">
+                  💡 <span className="text-green-400">Try typing something! Type any command and press Enter to learn more about me.</span>
+                </p>
+              </div>
+              {/* Small arrow pointing down to terminal */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-2">
+                <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-green-500"></div>
+              </div>
+            </div>
+          )}
           <div className="bg-gray-900 rounded-lg p-4 max-w-4xl mx-auto border border-green-500">
             {/* Terminal window header with colored buttons */}
             <div className="relative flex items-center mb-3 pb-2 border-b border-gray-700">
@@ -330,7 +349,7 @@ const Portfolio = () => {
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
               <div className="absolute left-16 text-green-400 font-mono text-sm">
-                about_me.exe
+                about_me.py
               </div>
             </div>
             {/* Terminal content area - shows interactive terminal after scrolling */}
@@ -427,15 +446,15 @@ const Portfolio = () => {
         </div>
       </section>
       
-      {/* Additional Projects Section - Two column layout */}
+      {/* Additional Projects Section - Applied Physics & Data Analysis */}
       <section id="additional-projects" className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Container */}
           <div className="p-6 md:p-8">
-            {/* Two column layout */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
-              {/* Left Column - Applied Physics & Data Analysis */}
-              <div className="space-y-4 pr-4 md:pr-6 border-r-0 md:border-r-2 border-green-500">
+            {/* Single column layout - centered */}
+            <div className="max-w-4xl mx-auto">
+              {/* Applied Physics & Data Analysis Section */}
+              <div className="space-y-4">
                 {/* Section Title */}
                 <div className="border border-dashed border-green-500 rounded px-4 py-2 bg-gray-900">
                   <h3 className="text-green-400 font-bold text-lg md:text-xl text-center">
@@ -446,55 +465,6 @@ const Portfolio = () => {
                 {/* Projects List */}
                 <div className="space-y-3">
                   {appliedPhysicsProjects.map((project) => (
-                    <div key={project.id} className="flex items-center gap-3">
-                      {/* Project Name Box */}
-                      <div className="flex-1 bg-gray-900 border border-green-500 rounded px-3 py-2">
-                        <span className="text-gray-300 font-mono text-sm md:text-base">
-                          {project.name}
-                        </span>
-                      </div>
-                      
-                      {/* Two Circular Icons */}
-                      <div className="flex gap-2">
-                        {/* Report/Demo Link Icon */}
-                        <a
-                          href={project.reportUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
-                          title="Link to report"
-                        >
-                          <ExternalLink className="w-5 h-5 text-green-400" />
-                        </a>
-                        
-                        {/* GitHub Link Icon */}
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
-                          title="Link to GitHub"
-                        >
-                          <Github className="w-5 h-5 text-green-400" />
-                        </a>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              {/* Right Column - Other projects */}
-              <div className="space-y-4 pl-4 md:pl-6">
-                {/* Section Title */}
-                <div className="border border-dashed border-green-500 rounded px-4 py-2 bg-gray-900">
-                  <h3 className="text-green-400 font-bold text-lg md:text-xl text-center">
-                    Other projects
-                  </h3>
-                </div>
-                
-                {/* Projects List */}
-                <div className="space-y-3">
-                  {otherProjects.map((project) => (
                     <div key={project.id} className="flex items-center gap-3">
                       {/* Project Name Box */}
                       <div className="flex-1 bg-gray-900 border border-green-500 rounded px-3 py-2">
