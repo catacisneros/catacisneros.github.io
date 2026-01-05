@@ -1,6 +1,6 @@
 // Import React hooks and icons
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Terminal, ExternalLink, FileDown, Twitter } from 'lucide-react';
+import { Github, Linkedin, Terminal, ExternalLink, FileDown, Twitter, Youtube } from 'lucide-react';
 
 // Array of subtitle texts that cycle in the hero section
 const subtitleTexts = ['Cybersecurity', 'Physics', 'Computer Science'];
@@ -301,6 +301,15 @@ const Portfolio = () => {
               className="text-green-400 hover:text-white transition-colors"
             >
               <TikTokIcon className="w-6 h-6 hover:animate-pulse" />
+            </a>
+            
+            <a
+              href="https://www.youtube.com/@cybercata"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400 hover:text-white transition-colors"
+            >
+              <Youtube className="w-6 h-6 hover:animate-pulse" />
             </a>
             
             <button
