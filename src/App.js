@@ -13,7 +13,7 @@ const projects = [
     title: 'RSA Encrypted Client-Server Communication',
     image: process.env.PUBLIC_URL + '/RSA_Encryption.png',
     description: 'Secure messaging system implementing RSA-1024 encryption with SHA256 integrity verification. Features dual-socket architecture, PKCS1_OAEP padding, and secure key exchange protocol.',
-    languages: ['Python', 'PyCryptodome', 'Socket Programming', 'RSA/SHA256'],
+    languages: ['Python', 'PyCryptodome', 'RSA/SHA256'],
     githubUrl: 'https://github.com/catacisneros/cryptography',
     demoUrl: 'https://www.youtube.com/watch?v=_WXbKPG8QiM&t=6s'
   },
@@ -22,9 +22,9 @@ const projects = [
     title: 'Advanced Keylogger PoC ',
     image: process.env.PUBLIC_URL + '/Keylogger_Temp.png',
     description: 'Records keystrokes with timestamps, handles regular and special keys, and logs to a text file for easy review.',
-    languages: ['Python', 'pynput', 'React (JS)', 'FastAPI'],
+    languages: ['Python', 'socket', 'Flask'],
     githubUrl: 'https://github.com/catacisneros/Keylogger',
-    demoUrl: 'https://www.youtube.com/@catacis'
+    demoUrl: 'https://youtu.be/e8cjR6F0vdg'
   },
   {
     id: 3,
