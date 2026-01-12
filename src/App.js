@@ -244,7 +244,7 @@ const Portfolio = () => {
             <div className="w-full mt-6 sm:mt-8 lg:mt-0">
               <div className="w-full max-w-xs sm:max-w-md mx-auto lg:max-w-none aspect-square bg-[#E5E7EB] rounded-2xl shadow-2xl overflow-hidden relative">
                 <img
-                  src={process.env.PUBLIC_URL + '/Cata_exp.jpeg'}
+                  src={process.env.PUBLIC_URL + '/Cata_exp.JPEG'}
                   alt="Cata presenting a cybersecurity lecture about open-source software"
                   className="w-full h-full object-cover rounded-2xl opacity-100"
                   style={{ filter: isInverted ? 'invert(1)' : 'none' }}
