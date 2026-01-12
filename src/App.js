@@ -1,9 +1,5 @@
-// Import React hooks and icons
-import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Terminal, ExternalLink, FileDown, Twitter, Youtube } from 'lucide-react';
-
-// Array of subtitle texts that cycle in the hero section
-const subtitleTexts = ['Cybersecurity', 'Physics', 'Computer Science'];
+import React from 'react';
+import { Github, Linkedin, ExternalLink, FileDown, Youtube, Instagram, Globe, Mail } from 'lucide-react';
 
 // Array of project data - update with your actual project information
 const projects = [
@@ -13,7 +9,7 @@ const projects = [
     title: 'RSA Encrypted Client-Server Communication',
     image: process.env.PUBLIC_URL + '/RSA_Encryption.png',
     description: 'Secure messaging system implementing RSA-1024 encryption with SHA256 integrity verification. Features dual-socket architecture, PKCS1_OAEP padding, and secure key exchange protocol.',
-    languages: ['Python', 'PyCryptodome', 'RSA/SHA256'],
+    languages: ['Python', 'RSA/SHA256'],
     githubUrl: 'https://github.com/catacisneros/cryptography',
     demoUrl: 'https://www.youtube.com/watch?v=_WXbKPG8QiM&t=6s'
   },
@@ -44,7 +40,6 @@ const projects = [
     githubUrl: 'https://github.com/catacisneros/TCP_Socket_Server',
     demoUrl: 'https://www.youtube.com/@catacis'
   }
-  
 ];
 
 // Array of Applied Physics & Data Analysis projects
@@ -99,117 +94,8 @@ const appliedPhysicsProjects = [
   }
 ];
 
-
 // Main Portfolio component
 const Portfolio = () => {
-  // State variables to manage different features
-  const [userInput, setUserInput] = useState(''); // User input for terminal commands
-  const [terminalHistory, setTerminalHistory] = useState([]); // History of terminal commands and responses
-  const [showCursor, setShowCursor] = useState(true); // Controls cursor blinking animation
-  const [commandCount, setCommandCount] = useState(0); // Counter for terminal commands entered
-  const [animatedSubtitle, setAnimatedSubtitle] = useState(''); // Current animated subtitle text
-  const [subtitleIndex, setSubtitleIndex] = useState(0); // Index of current subtitle in array
-  const [isDeleting, setIsDeleting] = useState(false); // Whether subtitle is being deleted or typed
-  
-  // Makes the cursor blink on and off
-  useEffect(() => {
-    const cursorInterval = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 500);
-    
-    return () => clearInterval(cursorInterval);
-  }, []);
-  
-  // Creates typing/deleting animation for the subtitle in hero section
-  useEffect(() => {
-    const currentText = subtitleTexts[subtitleIndex];
-    
-    if (!isDeleting && animatedSubtitle.length < currentText.length) {
-      // Typing - add one character at a time
-      const timeout = setTimeout(() => {
-        setAnimatedSubtitle(currentText.slice(0, animatedSubtitle.length + 1));
-      }, 150);
-      return () => clearTimeout(timeout);
-    } else if (!isDeleting && animatedSubtitle.length === currentText.length) {
-      // Wait 2 seconds before starting to delete
-      const timeout = setTimeout(() => {
-        setIsDeleting(true);
-      }, 2000);
-      return () => clearTimeout(timeout);
-    } else if (isDeleting && animatedSubtitle.length > 0) {
-      // Deleting - remove one character at a time
-      const timeout = setTimeout(() => {
-        setAnimatedSubtitle(prev => prev.slice(0, -1));
-      }, 100);
-      return () => clearTimeout(timeout);
-    } else if (isDeleting && animatedSubtitle.length === 0) {
-      // Move to next text immediately when done deleting
-      setIsDeleting(false);
-      setSubtitleIndex(prev => (prev + 1) % subtitleTexts.length);
-    }
-  }, [animatedSubtitle, subtitleIndex, isDeleting]);
-  
-  // Returns a response message based on how many commands the user has entered
-  const getTerminalResponse = () => {
-    const messages = [
-      "Now streaming: cybersecurity explained simply in Spanish on <a href='https://tiktok.com/@catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>TikTok</a>",
-      "Breaking down complex security concepts, no gatekeeping, no fluff",
-      "Watch me explain the basics of cybersecurity in Spanish on <a href='https://tiktok.com/@catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>TikTok</a>",
-      "This is my CV → <a href='/Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>Catalina Cisneros</a>",
-      "Computer Science major with a Physics minor",
-      "Cybersecurity focused | CompTIA Security+ certified",
-      "Currently mentoring future security engineers as a Tech Fellow at CodePath",
-      "",
-      "pip install <a href='/Catalina Cisneros 1.pdf' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>my resume</a>",
-      "git push origin security_career",
-      "",
-      "echo '<a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect.%0A%0ABest%2C%0A[Your%20Name]' class='text-green-600 hover:text-green-200 hover:underline'>let’s talk</a>'",
-      "",
-      "Incoming recruiter ping detected",
-      "Response status: online",
-      "",
-      "Latina in tech | building, teaching, and shipping",
-      "Connect professionally on <a href='https://linkedin.com/in/catalinacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>LinkedIn</a>",
-      "Browse my projects on <a href='https://github.com/catacisneros' target='_blank' class='text-green-600 hover:text-green-200 hover:underline'>GitHub</a>",
-      "",
-      "Warning: following may upgrade your threat model",
-      "EOF"
-
-    ];
-    return messages[Math.min(commandCount, messages.length - 1)];
-  };
-
-  // Handles when user submits a command in the terminal
-  const handleTerminalSubmit = (e) => {
-    e.preventDefault();
-    const response = getTerminalResponse();
-    const newEntry = `catalina@security:~$ ${userInput}\n${response}`;
-    setTerminalHistory(prev => [...prev, newEntry]);
-    setCommandCount(prev => prev + 1);
-    setUserInput('');
-  };
-
-  // Handles Enter key press in terminal input
-  const handleTerminalKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      handleTerminalSubmit(e);
-    }
-  };
-
-  // Auto-scroll to terminal when new entries are added
-  useEffect(() => {
-    if (terminalHistory.length > 0) {
-      const terminalElement = document.getElementById('terminal-section');
-      if (terminalElement) {
-        terminalElement.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'end' 
-        });
-      }
-    }
-  }, [terminalHistory]);
-  
   // Custom TikTok icon component since Lucide doesn't have it
   const TikTokIcon = ({ className }) => (
     <svg 
@@ -223,161 +109,131 @@ const Portfolio = () => {
   );
   
   return (
-    <div className="min-h-screen bg-black text-green-400 font-mono">
-      {/* Background animation - random binary digits (1s and 0s) floating around */}
-      <div className="fixed inset-0 pointer-events-none opacity-5">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-green-500 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          >
-            {Math.random() > 0.5 ? '1' : '0'}
-          </div>
-        ))}
-      </div>
-      
-      {/* Hero Section - Main landing area with name and subtitle */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-4 mb-0">
-        <div className="text-center space-y-2 max-w-4xl">
-          {/* Terminal icon */}
-          <Terminal className="w-12 h-12 mx-auto" />
-          
-          {/* Name heading */}
-          <h2 className="text-4xl md:text-6xl font-bold">
-            Catalina Cisneros
-          </h2>
-          
-          {/* Animated subtitle that types and deletes */}
-          <div className="text-lg md:text-xl text-white">
-            <span className="text-green-400">
-              {animatedSubtitle}
-              <span className={`${showCursor ? 'opacity-100' : 'opacity-0'}`}>|</span>
-            </span>
-          </div>
-          
-          {/* Tagline */}
-          <p className="text-gray-400 text-base max-w-2xl mx-auto">
-            No, I won't hack your ex's Instagram.
-          </p>
-          
-          {/* Social media links and resume download */}
-          <div className="flex justify-center gap-4 pt-1">
+    <div className="min-h-screen bg-[#F5F3FF] text-[#0D0C13]">
+      {/* Hero Section - Split Screen Layout */}
+      <section id="home" className="min-h-screen flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center py-12 sm:py-16 md:py-20 lg:py-24">
+            {/* Left Side - Text Content */}
+            <div>
+              {/* Headline */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0D0C13] leading-tight tracking-tight">
+                Cybersecurity made practical
+              </h1>
+              
+              {/* Subheadline */}
+              <p className="text-base sm:text-lg md:text-xl text-[#0D0C13] leading-relaxed max-w-xl mt-4 sm:mt-6">
+              I'm <strong>Cata</strong>, a CS student specializing in cybersecurity, AI, and applied physics.
+              I build software projects and explain cybersecurity in Spanish without the complexity.
+              </p>
+              
+              {/* Social Icons and Stats Row */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mt-4 sm:mt-6">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <a
+                    href="https://tiktok.com/@catacisneros"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation">
+                    <TikTokIcon className="w-6 h-6 sm:w-5 sm:h-5" />
+                  </a>
             <a
               href="https://linkedin.com/in/catalinacisneros"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-400 hover:text-white transition-colors"
-            >
-              <Linkedin className="w-6 h-6 hover:animate-pulse" />
+                    className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation">
+            <Linkedin className="w-6 h-6 sm:w-5 sm:h-5" />
             </a>
-            
             <a
               href="https://github.com/catacisneros"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-green-400 hover:text-white transition-colors"
-            >
-              <Github className="w-6 h-6 hover:animate-spin" />
-            </a>
-            
-            <a
-              href="https://x.com/catacisnerosr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-400 hover:text-white transition-colors"
-            >
-              <Twitter className="w-6 h-6 hover:animate-bounce" />
-            </a>
-            
-            <a
-              href="https://tiktok.com/@catacisneros"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-400 hover:text-white transition-colors"
-            >
-              <TikTokIcon className="w-6 h-6 hover:animate-pulse" />
-            </a>
-            
-            <a
-              href="https://www.youtube.com/@cybercata"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-green-400 hover:text-white transition-colors"
-            >
-              <Youtube className="w-6 h-6 hover:animate-pulse" />
-            </a>
-            
+                    className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+                    <Github className="w-6 h-6 sm:w-5 sm:h-5" />
+                  </a>
+                  <a
+                    href="mailto:catacis@catacis.anonaddy.com?subject=Contact%20-%20Catalina%20Cisneros"
+                    className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+                  <Mail className="w-6 h-6 sm:w-5 sm:h-5" />
+                  </a>
             <button
               onClick={() => {
                 const url = process.env.PUBLIC_URL + '/Catalina Cisneros 1.pdf';
                 window.open(encodeURI(url), '_blank', 'noopener,noreferrer');
               }}
-              className="text-green-400 hover:text-white transition-colors"
-            >
-              <FileDown className="w-6 h-6 hover:animate-pulse" />
+                    className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+                    <FileDown className="w-6 h-6 sm:w-5 sm:h-5" />
             </button>
           </div>
+                <a
+                  href="https://tiktok.com/@catacisneros"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs sm:text-sm text-[#0D0C13] hover:text-[#A78BFA] transition-colors"
+                >
+                  10k+ aprendiendo ciber conmigo
+                </a>
+              </div>
           
-          <p className="text-xs text-gray-600">
-            I promise I'm friendly, <br/>{' '}
-                <a href='mailto:catacis@catacis.anonaddy.com?subject=Job%20Opportunity%20-%20Catalina%20Cisneros&body=Hi%20Catalina%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20potential%20opportunity%20with%20you.%0A%0APlease%20let%20me%20know%20when%20would%20be%20a%20good%20time%20to%20chat.%0A%0ABest%20regards,%0A[Your%20Name]' target='_blank' rel='noreferrer' className='text-gray-600 hover:text-gray-200 underline'> send me an email :) </a>
-          </p>
-        </div>
-      </section>
-
-      
-      
-      {/* Terminal Section - Interactive command-line interface */}
-      <section id="terminal-section" className="pt-0 pb-16 px-4 mt-0">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          {/* Tip bubble encouraging users to type */}
-          {commandCount === 0 && (
-            <div className="relative max-w-4xl mx-auto mb-4 animate-pulse">
-              <div className="bg-green-900/80 border border-green-500 rounded-lg px-4 py-3 text-left">
-                <p className="text-green-300 text-sm font-mono">
-                  💡 <span className="text-green-400">Try typing something! Type any command and press Enter to learn more about me.</span>
-                </p>
+              {/* Action Buttons */}
+              <div className="flex flex-wrap gap-2 sm:gap-3 md:gap-4 pt-4 sm:pt-6">
+                <a
+                  href="#projects"
+                  className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
+                >
+                  Projects
+                </a>
+                <a
+                  href="#skills"
+                  className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
+                >
+                  Skills & Tools
+                </a>
+                <a
+                  href="#additional-projects"
+                  className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
+                >
+                  Physics & Data Analysis
+                </a>
+                <a
+                  href="https://tiktok.com/@catacisneros"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
+                >
+                  Cibersecurity (ES)
+                </a>
+                <a
+                  href="mailto:catacis@catacis.anonaddy.com?subject=Contact%20-%20Catalina%20Cisneros&body=Hi%20Cata%2C%0A%0AI%20wanted%20to%20reach%20out..."
+                  className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
+                >
+                  Contact me
+                </a>
               </div>
-              {/* Small arrow pointing down to terminal */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 -bottom-2">
-                <div className="w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-green-500"></div>
-              </div>
+              
+              {/* Bilingual Clarifier */}
+              <p className="text-xs sm:text-sm text-[#0D0C13] pt-4 sm:pt-6">
+                <a
+                  href="https://tiktok.com/@catacisneros"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-[#A78BFA] transition-colors"
+                >
+                  Prefer español?
+                </a>{' '}
+                Mucho de mi contenido también está en español 🇪🇸🇺🇸
+              </p>
             </div>
-          )}
-          <div className="bg-gray-900 rounded-lg p-4 max-w-4xl mx-auto border border-green-500">
-            {/* Terminal window header with colored buttons */}
-            <div className="relative flex items-center mb-3 pb-2 border-b border-gray-700">
-              <div className="flex space-x-2">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-              </div>
-              <div className="absolute left-16 text-green-400 font-mono text-sm">
-                about_me.py
-              </div>
-            </div>
-            {/* Terminal content area - shows interactive terminal after scrolling */}
-            <div className="text-left space-y-2">
-              {/* Display terminal history */}
-                  {terminalHistory.map((entry, index) => (
-                    <div key={index} className="text-green-400 text-sm whitespace-pre-line" dangerouslySetInnerHTML={{ __html: entry }} />
-                  ))}
-              {/* Terminal input field */}
-                  <div className="flex items-center">
-                <span className="text-green-300">catalina@security:~$ </span>
-                    <input
-                      type="text"
-                      value={userInput}
-                      onChange={(e) => setUserInput(e.target.value)}
-                      onKeyDown={handleTerminalKeyDown}
-                  className="bg-transparent text-green-400 outline-none font-mono flex-1"
-                    />
-                    <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} text-green-400`}>_</span>
+            
+            {/* Right Side - Image */}
+            <div className="w-full mt-6 sm:mt-8 lg:mt-0">
+              <div className="w-full max-w-xs sm:max-w-md mx-auto lg:max-w-none aspect-square bg-[#E5E7EB] rounded-2xl shadow-2xl overflow-hidden relative">
+                <img
+                  src={process.env.PUBLIC_URL + '/Cata_exp.jpeg'}
+                  alt="Cata presenting a cybersecurity lecture about open-source software"
+                  className="w-full h-full object-cover rounded-2xl opacity-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-[#A78BFA]/10 to-transparent pointer-events-none"></div>
                   </div>
             </div>
           </div>
@@ -385,42 +241,57 @@ const Portfolio = () => {
       </section>
       
       {/* Projects Section - Displays 4 projects in a grid */}
-      <section id="projects" className="py-16 px-4">
+      <section id="projects" className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F3FF]">
         <div className="max-w-7xl mx-auto">
           {/* Section title */}
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-green-400">
-            My Coolest Projects
+          <div className="flex items-center justify-between mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#0D0C13]">
+             Software Projects
           </h2>
+            <a
+              href="https://github.com/catacisneros?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
+            >
+              View all
+            </a>
+          </div>
           
           {/* Grid of project cards - responsive: 1 column on mobile, 2 on tablet, 4 on desktop */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="bg-gray-900 border border-green-500 rounded-lg overflow-hidden hover:border-green-400 transition-colors"
+                className="bg-[#E5E7EB] rounded-lg overflow-hidden hover:bg-[#D1D5DB] transition-colors border border-neutral-800 flex flex-col"
               >
                 {/* Project screenshot/image */}
-                <div className="w-full h-48 bg-gray-800 overflow-hidden">
+                <div className="w-full h-48 bg-[#F5F3FF] overflow-hidden border border-neutral-300">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 border border-[#E5E7EB]"
                   />
                 </div>
                 
                 {/* Project information container */}
-                <div className="p-4 space-y-3">
+                <div className="p-4 flex flex-col flex-1">
+                  {/* Project title */}
+                  <h3 className="text-[#0D0C13] font-semibold text-base mb-2">
+                    {project.title}
+                  </h3>
+                  
                   {/* Project description text */}
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                  <p className="text-[#0D0C13] text-sm leading-relaxed mb-3 flex-1">
                     {project.description}
                   </p>
                   
                   {/* Technology tags (languages/frameworks used) */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {project.languages.map((language, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-green-900/30 border border-green-500/50 text-green-400 text-xs rounded"
+                        className="px-3 py-1 bg-[#CBD5E1] text-[#0D0C13] text-xs rounded-md border border-neutral-800"
                       >
                         {language}
                       </span>
@@ -428,23 +299,23 @@ const Portfolio = () => {
                   </div>
                   
                   {/* Links to GitHub repo and live demo */}
-                  <div className="flex gap-2 pt-2">
+                  <div className="flex gap-2">
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-gray-800 border border-green-500 text-green-400 hover:bg-green-500 hover:text-black transition-colors text-sm font-mono"
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 sm:px-2.5 sm:py-2 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors text-xs sm:text-sm font-medium rounded-md touch-manipulation"
                     >
-                      <Github className="w-4 h-4" />
+                      <Github className="w-5 h-5 sm:w-4 sm:h-4" />
                       Github
                     </a>
                     <a
                       href={project.demoUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-gray-800 border border-green-500 text-green-400 hover:bg-green-500 hover:text-black transition-colors text-sm font-mono"
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 sm:px-2.5 sm:py-2 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors text-xs sm:text-sm font-medium rounded-md touch-manipulation"
                     >
-                      <ExternalLink className="w-4 h-4" />
+                      <ExternalLink className="w-5 h-5 sm:w-4 sm:h-4" />
                       Demo
                     </a>
                   </div>
@@ -455,62 +326,79 @@ const Portfolio = () => {
         </div>
       </section>
       
-      {/* Additional Projects Section - Applied Physics & Data Analysis */}
-      <section id="additional-projects" className="py-16 px-4">
+      {/* Skills & Tools Section */}
+      <section id="skills" className="py-10 sm:py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F3FF]">
         <div className="max-w-7xl mx-auto">
-          {/* Container */}
-          <div className="p-6 md:p-8">
-            {/* Single column layout - centered */}
-            <div className="max-w-4xl mx-auto">
-              {/* Applied Physics & Data Analysis Section */}
-              <div className="space-y-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0D0C13] mb-6 sm:mb-8 text-left">
+            Skills & Tools
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+            {/* Security and networking */}
+            <div className="bg-[#E5E7EB] border border-neutral-800 rounded-lg p-4 hover:bg-[#D1D5DB] transition-colors">
+              <h4 className="text-[#0D0C13] font-semibold text-base mb-2">Security and networking</h4>
+              <ul className="space-y-1.5">
+                <li className="text-[#0D0C13] text-sm leading-relaxed">Splunk, Wireshark, Nmap, Snort, Burp Suite, OSINT tools, packet analysis, incident response</li>
+              </ul>
+            </div>
+            
+            {/* Programming and systems */}
+            <div className="bg-[#E5E7EB] border border-neutral-800 rounded-lg p-4 hover:bg-[#D1D5DB] transition-colors">
+              <h4 className="text-[#0D0C13] font-semibold text-base mb-2">Programming and systems</h4>
+              <ul className="space-y-1.5">
+                <li className="text-[#0D0C13] text-sm leading-relaxed">Python, Bash, SQL, Java, C and C++, Linux (Ubuntu, Kali), macOS, Windows</li>
+              </ul>
+            </div>
+            
+            {/* Cloud, data and platforms */}
+            <div className="bg-[#E5E7EB] border border-neutral-800 rounded-lg p-4 hover:bg-[#D1D5DB] transition-colors">
+              <h4 className="text-[#0D0C13] font-semibold text-base mb-2">Cloud, data and platforms</h4>
+              <ul className="space-y-1.5">
+                <li className="text-[#0D0C13] text-sm leading-relaxed">Git and GitHub, AWS, Power BI, Salesforce, SOC dashboards, data visualization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Additional Projects Section - Applied Physics & Data Analysis */}
+      <section id="additional-projects" className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F3FF]">
+        <div className="max-w-7xl mx-auto">
                 {/* Section Title */}
-                <div className="border border-dashed border-green-500 rounded px-4 py-2 bg-gray-900">
-                  <h3 className="text-green-400 font-bold text-lg md:text-xl text-center">
-                    Applied Physics & Data Analysis
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0D0C13] mb-6 sm:mb-10">
+                    Applied Physics Analysis & Lab Reports
                   </h3>
-                </div>
                 
-                {/* Projects List */}
-                <div className="space-y-3">
-                  {appliedPhysicsProjects.map((project) => (
-                    <div key={project.id} className="flex items-center gap-3">
-                      {/* Project Name Box */}
-                      <div className="flex-1 bg-gray-900 border border-green-500 rounded px-3 py-2">
-                        <span className="text-gray-300 font-mono text-sm md:text-base">
-                          {project.name}
-                        </span>
-                      </div>
-                      
-                      {/* Two Circular Icons */}
-                      <div className="flex gap-2">
-                        {/* Report/Demo Link Icon */}
-                        <a
-                          href={project.reportUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
-                          title="Link to report"
-                        >
-                          <ExternalLink className="w-5 h-5 text-green-400" />
-                        </a>
-                        
-                        {/* GitHub Link Icon */}
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="w-10 h-10 bg-gray-800 border border-green-500 rounded-full flex items-center justify-center hover:bg-green-500 hover:text-black transition-colors"
-                          title="Link to GitHub"
-                        >
-                          <Github className="w-5 h-5 text-green-400" />
-                        </a>
-                      </div>
-                    </div>
-                  ))}
+          {/* Projects List - 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3">
+            {appliedPhysicsProjects.map((project) => (
+              <div key={project.id} className="flex items-center gap-3 bg-[#E5E7EB] rounded-md p-3 border border-neutral-800 hover:bg-[#D1D5DB] transition-colors">
+                <div className="flex-1">
+                  <span className="text-[#0D0C13] text-sm leading-relaxed">
+                    {project.name}
+                  </span>
+                </div>
+                <div className="flex gap-2">
+                  <a
+                    href={project.reportUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-8 sm:h-8 bg-[#0D0C13] text-[#F5F3FF] rounded-full flex items-center justify-center hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors touch-manipulation"
+                    title="Link to report"
+                  >
+                    <ExternalLink className="w-5 h-5 sm:w-4 sm:h-4" />
+                  </a>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 sm:w-8 sm:h-8 bg-[#0D0C13] text-[#F5F3FF] rounded-full flex items-center justify-center hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors touch-manipulation"
+                    title="Link to GitHub"
+                  >
+                    <Github className="w-5 h-5 sm:w-4 sm:h-4" />
+                  </a>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -518,9 +406,67 @@ const Portfolio = () => {
       
       
       {/* Footer - Copyright and footer text */}
-      <footer className="text-center py-8 text-gray-600 text-xs border-t border-gray-800">
-        <p>© 2024 Catalina Cisneros • Vibe coded with Cursor</p>
-        <p className="mt-1">This site is unhackable* (*probably)</p>
+      <footer className="text-center py-8 sm:py-12 px-4 sm:px-6 md:px-8 lg:px-12 text-[#0D0C13] text-xs sm:text-sm border-t border-neutral-300 bg-[#F5F3FF]">
+        {/* Social Icons */}
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <a
+            href="https://tiktok.com/@catacisneros"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation">
+                    <TikTokIcon className="w-6 h-6 sm:w-5 sm:h-5" />
+          </a>
+          <a
+            href="https://www.youtube.com/@cybercata"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+            <Youtube className="w-5 h-5" />
+          </a>
+          <a
+            href="https://linkedin.com/in/catalinacisneros"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation">
+            <Linkedin className="w-6 h-6 sm:w-5 sm:h-5" />
+          </a>
+          <a
+            href="https://github.com/catacisneros"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+                    <Github className="w-6 h-6 sm:w-5 sm:h-5" />
+          </a>
+          <a
+            href="https://instagram.com/cata.cisneros"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+            <Instagram className="w-5 h-5" />
+          </a>
+          <a
+            href="https://catacisneros.github.io/cybercata/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+            <Globe className="w-5 h-5" />
+          </a>
+          <a
+            href="mailto:catacis@catacis.anonaddy.com?subject=Contact%20-%20Catalina%20Cisneros"
+            className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+                  <Mail className="w-6 h-6 sm:w-5 sm:h-5" />
+          </a>
+          <button
+            onClick={() => {
+              const url = process.env.PUBLIC_URL + '/Catalina Cisneros 1.pdf';
+              window.open(encodeURI(url), '_blank', 'noopener,noreferrer');
+            }}
+            className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
+                    <FileDown className="w-6 h-6 sm:w-5 sm:h-5" />
+          </button>
+        </div>
+        <p>© 2026 CyberCata </p>
+        <p>Built by Cata</p>
       </footer>
     </div>
   );
