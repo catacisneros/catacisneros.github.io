@@ -1,5 +1,5 @@
-import React from 'react';
-import { Github, Linkedin, ExternalLink, FileDown, Youtube, Instagram, Globe, Mail } from 'lucide-react';
+import React, { useState } from 'react';
+import { Github, Linkedin, ExternalLink, FileDown, Youtube, Instagram, Globe, Mail, Palette } from 'lucide-react';
 
 // Array of project data - update with your actual project information
 const projects = [
@@ -96,6 +96,8 @@ const appliedPhysicsProjects = [
 
 // Main Portfolio component
 const Portfolio = () => {
+  const [isInverted, setIsInverted] = useState(false);
+  
   // Custom TikTok icon component since Lucide doesn't have it
   const TikTokIcon = ({ className }) => (
     <svg 
@@ -109,7 +111,20 @@ const Portfolio = () => {
   );
   
   return (
-    <div className="min-h-screen bg-[#F5F3FF] text-[#0D0C13]">
+    <>
+      {/* Color Inversion Toggle Button - Fixed position in top right */}
+      <button
+        onClick={() => setIsInverted(!isInverted)}
+        className="fixed top-4 right-4 z-50 p-3 bg-[#0D0C13] text-[#F5F3FF] rounded-full shadow-lg hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-all duration-200 touch-manipulation"
+        aria-label={isInverted ? "Disable color inversion" : "Enable color inversion"}
+        title={isInverted ? "Disable color inversion" : "Enable color inversion"}
+      >
+        <Palette className="w-5 h-5" />
+      </button>
+      <div 
+        className="min-h-screen bg-[#F5F3FF] text-[#0D0C13]"
+        style={{ filter: isInverted ? 'invert(1)' : 'none' }}
+      >
       {/* Hero Section - Split Screen Layout */}
       <section id="home" className="min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 w-full">
@@ -232,6 +247,7 @@ const Portfolio = () => {
                   src={process.env.PUBLIC_URL + '/Cata_exp.jpeg'}
                   alt="Cata presenting a cybersecurity lecture about open-source software"
                   className="w-full h-full object-cover rounded-2xl opacity-100"
+                  style={{ filter: isInverted ? 'invert(1)' : 'none' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#A78BFA]/10 to-transparent pointer-events-none"></div>
                   </div>
@@ -271,6 +287,7 @@ const Portfolio = () => {
                     src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 border border-[#E5E7EB]"
+                    style={{ filter: isInverted ? 'invert(1)' : 'none' }}
                   />
                 </div>
                 
@@ -468,7 +485,8 @@ const Portfolio = () => {
         <p>© 2026 CyberCata </p>
         <p>Built by Cata</p>
       </footer>
-    </div>
+      </div>
+    </>
   );
 };
 
