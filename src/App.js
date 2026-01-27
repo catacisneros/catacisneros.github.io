@@ -186,7 +186,7 @@ const Portfolio = () => {
                   rel="noopener noreferrer"
                   className="text-xs sm:text-sm text-[#0D0C13] hover:text-[#A78BFA] transition-colors"
                 >
-                  10k+ aprendiendo ciber conmigo
+                  20k+ aprendiendo ciber conmigo
                 </a>
               </div>
           
