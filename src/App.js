@@ -455,7 +455,7 @@ const Portfolio = () => {
                     <Github className="w-6 h-6 sm:w-5 sm:h-5" />
           </a>
           <a
-            href="https://instagram.com/cata.cisneros"
+            href="https://instagram.com/cyber.cata"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
