@@ -173,7 +173,7 @@ const Portfolio = () => {
                   </a>
             <button
               onClick={() => {
-                const url = process.env.PUBLIC_URL + '/Catalina Cisneros 1.pdf';
+                const url = process.env.PUBLIC_URL + '/Catalina Cisneros WS.pdf';
                 window.open(encodeURI(url), '_blank', 'noopener,noreferrer');
               }}
                     className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
@@ -475,7 +475,7 @@ const Portfolio = () => {
           </a>
           <button
             onClick={() => {
-              const url = process.env.PUBLIC_URL + '/Catalina Cisneros 1.pdf';
+              const url = process.env.PUBLIC_URL + '/Catalina Cisneros WS.pdf';
               window.open(encodeURI(url), '_blank', 'noopener,noreferrer');
             }}
             className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
