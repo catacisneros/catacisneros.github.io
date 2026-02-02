@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Github, Linkedin, ExternalLink, FileDown, Youtube, Instagram, Globe, Mail, Palette } from 'lucide-react';
+import React, {} from 'react';
+import { Github, Linkedin, ExternalLink, FileDown, Youtube, Instagram, Globe, Mail } from 'lucide-react';
 
 // Array of project data - update with your actual project information
 const projects = [
@@ -96,7 +96,7 @@ const appliedPhysicsProjects = [
 
 // Main Portfolio component
 const Portfolio = () => {
-  const [isInverted, setIsInverted] = useState(false);
+
   
   // Custom TikTok icon component since Lucide doesn't have it
   const TikTokIcon = ({ className }) => (
@@ -112,19 +112,6 @@ const Portfolio = () => {
   
   return (
     <>
-      {/* Color Inversion Toggle Button - Fixed position in top right */}
-      <button
-        onClick={() => setIsInverted(!isInverted)}
-        className="fixed top-4 right-4 z-50 p-3 bg-[#0D0C13] text-[#F5F3FF] rounded-full shadow-lg hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-all duration-200 touch-manipulation"
-        aria-label={isInverted ? "Disable color inversion" : "Enable color inversion"}
-        title={isInverted ? "Disable color inversion" : "Enable color inversion"}
-      >
-        <Palette className="w-5 h-5" />
-      </button>
-      <div 
-        className="min-h-screen bg-[#F5F3FF] text-[#0D0C13]"
-        style={{ filter: isInverted ? 'invert(1)' : 'none' }}
-      >
       {/* Hero Section - Split Screen Layout */}
       <section id="home" className="min-h-screen flex items-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 w-full">
@@ -138,20 +125,15 @@ const Portfolio = () => {
               
               {/* Subheadline */}
               <p className="text-base sm:text-lg md:text-xl text-[#0D0C13] leading-relaxed max-w-xl mt-4 sm:mt-6">
-              I'm <strong>Cata</strong>, a CS student specializing in cybersecurity, AI, and applied physics.
-              I build software projects and explain cybersecurity in Spanish without the complexity.
+              I'm <strong>Cata</strong>, a CS student focused on <strong></strong>cybersecurity.
+              I build projects in cryptography and networking. Experienced in incident response, log
+              analysis, compliance, and client data protection.
               </p>
               
               {/* Social Icons and Stats Row */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mt-4 sm:mt-6">
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <a
-                    href="https://tiktok.com/@catacisneros"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation">
-                    <TikTokIcon className="w-6 h-6 sm:w-5 sm:h-5" />
-                  </a>
+              
             <a
               href="https://linkedin.com/in/catalinacisneros"
               target="_blank"
@@ -179,6 +161,13 @@ const Portfolio = () => {
                     className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
                     <FileDown className="w-6 h-6 sm:w-5 sm:h-5" />
             </button>
+            <a
+                    href="https://catacisneros.github.io/cybercata/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation">
+                    <Globe className="w-6 h-6 sm:w-5 sm:h-5" />
+                  </a>
           </div>
                 <a
                   href="https://tiktok.com/@catacisneros"
@@ -211,49 +200,36 @@ const Portfolio = () => {
                   Physics & Data Analysis
                 </a>
                 <a
-                  href="https://tiktok.com/@catacisneros"
+                  href="https://catacisneros.github.io/cybercata/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
                 >
-                  Cibersecurity (ES)
+                  CyberCata
                 </a>
                 <a
-                  href="mailto:catacis@catacis.anonaddy.com?subject=Contact%20-%20Catalina%20Cisneros&body=Hi%20Cata%2C%0A%0AI%20wanted%20to%20reach%20out..."
+                  href="/Catalina Cisneros WS.pdf"
                   className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
                 >
-                  Contact me
+                  Resume
                 </a>
               </div>
               
-              {/* Bilingual Clarifier */}
-              <p className="text-xs sm:text-sm text-[#0D0C13] pt-4 sm:pt-6">
-                <a
-                  href="https://tiktok.com/@catacisneros"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline hover:text-[#A78BFA] transition-colors"
-                >
-                  Prefer español?
-                </a>{' '}
-                Mucho de mi contenido también está en español 🇪🇸🇺🇸
-              </p>
             </div>
             
-            {/* Right Side - Image */}
+            {/* Right Side - Image - isolated from dark mode invert so colors stay original */}
             <div className="w-full mt-6 sm:mt-8 lg:mt-0">
               <div className="w-full max-w-xs sm:max-w-md mx-auto lg:max-w-none aspect-square bg-[#E5E7EB] rounded-2xl shadow-2xl overflow-hidden relative">
-                <img
-                  src={process.env.PUBLIC_URL + '/Cata_exp.JPEG'}
-                  alt="Cata presenting a cybersecurity lecture about open-source software"
-                  className="w-full h-full object-cover rounded-2xl opacity-100"
-                  style={{ filter: isInverted ? 'invert(1)' : 'none' }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-br from-[#A78BFA]/10 to-transparent pointer-events-none"></div>
-                  </div>
+                  <img
+                    src={process.env.PUBLIC_URL + '/Cata_exp.png'}
+                    alt="Cata presenting a cybersecurity lecture about open-source software"
+                    className="w-full h-full object-cover opacity-100"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#A78BFA]/10 to-transparent pointer-events-none"></div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
       </section>
       
       {/* Projects Section - Displays 4 projects in a grid */}
@@ -281,14 +257,13 @@ const Portfolio = () => {
                 key={project.id}
                 className="bg-[#E5E7EB] rounded-lg overflow-hidden hover:bg-[#D1D5DB] transition-colors border border-neutral-800 flex flex-col"
               >
-                {/* Project screenshot/image */}
+                {/* Project screenshot/image - isolated from dark mode invert; scale on wrapper so hover doesn't break counter-invert */}
                 <div className="w-full h-48 bg-[#F5F3FF] overflow-hidden border border-neutral-300">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 border border-[#E5E7EB]"
-                    style={{ filter: isInverted ? 'invert(1)' : 'none' }}
-                  />
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover border border-[#E5E7EB]"
+                    />
                 </div>
                 
                 {/* Project information container */}
@@ -485,7 +460,7 @@ const Portfolio = () => {
         <p>© 2026 CyberCata </p>
         <p>Built by Cata</p>
       </footer>
-      </div>
+
     </>
   );
 };
