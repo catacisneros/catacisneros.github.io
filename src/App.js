@@ -170,12 +170,12 @@ const Portfolio = () => {
                   </a>
           </div>
                 <a
-                  href="https://tiktok.com/@catacisneros"
+                  href="https://catacisneros.github.io/cybercata/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs sm:text-sm text-[#0D0C13] hover:text-[#A78BFA] transition-colors"
                 >
-                  20k+ aprendiendo ciber conmigo
+                  50k+ aprendiendo ciber conmigo
                 </a>
               </div>
           
