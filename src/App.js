@@ -127,7 +127,8 @@ const Portfolio = () => {
               <p className="text-base sm:text-lg md:text-xl text-[#0D0C13] leading-relaxed max-w-xl mt-4 sm:mt-6">
               I'm <strong>Cata</strong>, a computer scientist focused on <strong></strong>cybersecurity.
               <br />
-              I like learning security from multiple angles and building projects that reflect that curiosity. My work spans areas such as digital forensics, penetration testing, SOC analysis, cryptography, network programming, OSINT, and compliance. <br /> I'm currently preparing for the CompTIA Security+ certification, as well as building and documenting my own projects.
+              <br />
+              I like learning security from multiple angles and building projects that reflect that curiosity. My work spans areas such as digital forensics, penetration testing, SOC analysis, cryptography, network programming, OSINT, and compliance. <br /> <br /> I'm currently preparing for the CompTIA Security+ certification, as well as building and documenting my own projects.
               </p>
               
               {/* Social Icons and Stats Row */}
