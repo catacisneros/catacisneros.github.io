@@ -329,7 +329,8 @@ const Portfolio = () => {
             <div className="bg-[#E5E7EB] border border-neutral-800 rounded-lg p-4 hover:bg-[#D1D5DB] transition-colors">
               <h4 className="text-[#0D0C13] font-semibold text-base mb-2">Security and networking</h4>
               <ul className="space-y-1.5">
-                <li className="text-[#0D0C13] text-sm leading-relaxed">Splunk, Wireshark, Nmap, Snort, Burp Suite, OSINT tools, packet analysis, incident response</li>
+                <li className="text-[#0D0C13] text-sm leading-relaxed">Splunk, Wireshark, Snort, Autopsy, FTK Imager, Burp Suite, Metasploit, Shodan, John the Ripper, CyberChef, MITMProxy, Nmap, OSINT tools, auditd, Docker, Nginx, ExifTool, E3, Catalyst, Python (pandas, requests, scapy, socket)
+                </li>
               </ul>
             </div>
             
@@ -337,15 +338,16 @@ const Portfolio = () => {
             <div className="bg-[#E5E7EB] border border-neutral-800 rounded-lg p-4 hover:bg-[#D1D5DB] transition-colors">
               <h4 className="text-[#0D0C13] font-semibold text-base mb-2">Programming and systems</h4>
               <ul className="space-y-1.5">
-                <li className="text-[#0D0C13] text-sm leading-relaxed">Python, Bash, SQL, Java, C and C++, Linux (Ubuntu, Kali), macOS, Windows</li>
+                <li className="text-[#0D0C13] text-sm leading-relaxed">Python, Bash, SQL, PowerShell, Linux, Windows, TCP/IP networking, Git, Docker, AWS, REST APIs, JSON</li>
               </ul>
             </div>
             
             {/* Cloud, data and platforms */}
             <div className="bg-[#E5E7EB] border border-neutral-800 rounded-lg p-4 hover:bg-[#D1D5DB] transition-colors">
-              <h4 className="text-[#0D0C13] font-semibold text-base mb-2">Cloud, data and platforms</h4>
+              <h4 className="text-[#0D0C13] font-semibold text-base mb-2">Security Concepts</h4>
               <ul className="space-y-1.5">
-                <li className="text-[#0D0C13] text-sm leading-relaxed">Git and GitHub, AWS, Power BI, Salesforce, SOC dashboards, data visualization</li>
+                <li className="text-[#0D0C13] text-sm leading-relaxed">SIEM monitoring, incident response, log analysis, threat detection, packet analysis, vulnerability assessment, digital forensics, OSINT investigations, network security, IDS and IPS monitoring
+                </li>
               </ul>
             </div>
           </div>
