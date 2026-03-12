@@ -125,9 +125,8 @@ const Portfolio = () => {
               
               {/* Subheadline */}
               <p className="text-base sm:text-lg md:text-xl text-[#0D0C13] leading-relaxed max-w-xl mt-4 sm:mt-6">
-              I'm <strong>Cata</strong>, a CS student focused on <strong></strong>cybersecurity.
-              I build projects in cryptography and networking. Experienced in incident response, log
-              analysis, compliance, and client data protection.
+              I'm <strong>Cata</strong>, a computer scientist focused on <strong></strong>cybersecurity.
+              My work spans areas such as digital forensics, penetration testing, SOC analysis, cryptography, network programming, OSINT, and compliance. I like learning security from multiple angles and building projects that reflect that curiosity. I'm currently preparing for the <strong>CompTIA Security+</strong> certification.
               </p>
               
               {/* Social Icons and Stats Row */}
@@ -175,7 +174,7 @@ const Portfolio = () => {
                   rel="noopener noreferrer"
                   className="text-xs sm:text-sm text-[#0D0C13] hover:text-[#A78BFA] transition-colors"
                 >
-                  50k+ aprendiendo ciber conmigo
+                  70k+ aprendiendo ciber conmigo
                 </a>
               </div>
           
