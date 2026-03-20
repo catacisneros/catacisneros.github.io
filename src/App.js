@@ -156,7 +156,7 @@ const Portfolio = () => {
                   </a>
             <button
               onClick={() => {
-                const url = process.env.PUBLIC_URL + '/Catalina Cisneros WS.pdf';
+                const url = process.env.PUBLIC_URL + '/Catalina_Cisneros_Cybersecurity.pdf';
                 window.open(encodeURI(url), '_blank', 'noopener,noreferrer');
               }}
                     className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
@@ -209,7 +209,7 @@ const Portfolio = () => {
                   CyberCata
                 </a>
                 <a
-                  href="/Catalina Cisneros WS.pdf"
+                  href="/Catalina_Cisneros_Cybersecurity.pdf"
                   className="px-4 py-2.5 sm:px-5 bg-[#0D0C13] text-[#F5F3FF] hover:bg-[#A78BFA] hover:text-[#F5F3FF] transition-colors rounded-md text-xs sm:text-sm font-medium touch-manipulation"
                 >
                   Resume
@@ -453,7 +453,7 @@ const Portfolio = () => {
           </a>
           <button
             onClick={() => {
-              const url = process.env.PUBLIC_URL + '/Catalina Cisneros WS.pdf';
+              const url = process.env.PUBLIC_URL + '/Catalina_Cisneros_Cybersecurity.pdf';
               window.open(encodeURI(url), '_blank', 'noopener,noreferrer');
             }}
             className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
