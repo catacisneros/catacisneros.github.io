@@ -356,7 +356,22 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-      
+                 
+       {/* CyberCata Section */}
+      <section id="cybercata" className="py-10 sm:py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F3FF]">
+        <div className="max-w-7xl mx-auto">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0D0C13] mb-6 sm:mb-8 text-left">
+            CyberCata
+          </h3>
+        </div>
+           <p className="text-[#0D0C13] text-sm leading-relaxed mb-3 flex-1">
+           cybersecurity education for Spanish-speaking audiences 80,000+ followers across platforms. I break down networking fundamentals, 
+           security tools, OSINT, and protocols in Spanish — making security accessible to a global community that's often underserved by 
+           English-only content. <br /> <br /> Speaker at beginner cybersecurity events, including how to start your career in cybersecurity and breaking into the field.
+          </p>
+         </div>
+      </section>
+  
       {/* Additional Projects Section - Applied Physics & Data Analysis */}
       <section id="additional-projects" className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F3FF]">
         <div className="max-w-7xl mx-auto">
