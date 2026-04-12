@@ -120,12 +120,15 @@ const Portfolio = () => {
             <div>
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0D0C13] leading-tight tracking-tight">
-                Cybersecurity. Built from the ground up.
+                Cybersecurity. 
               </h1>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#0D0C13] leading-tight tracking-tight">
+                Built from the ground up.
+              </h2>
               
               {/* Subheadline */}
               <p className="text-base sm:text-lg md:text-xl text-[#0D0C13] leading-relaxed max-w-xl mt-4 sm:mt-6">
-              I'm <strong>Cata</strong>, a computer scientist and <strong>security practitioner</strong>.
+              I'm <strong>Cata</strong>, a computer scientist and security practitioner.
               <br />
               <br />
               I build tools, break systems (ethically), apply security engineering across networks, endpoints and cryptographic systems.
