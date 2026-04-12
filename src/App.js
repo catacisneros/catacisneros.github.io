@@ -120,15 +120,17 @@ const Portfolio = () => {
             <div>
               {/* Headline */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#0D0C13] leading-tight tracking-tight">
-                Cybersecurity made practical
+                Cybersecurity. Built from the ground up.
               </h1>
               
               {/* Subheadline */}
               <p className="text-base sm:text-lg md:text-xl text-[#0D0C13] leading-relaxed max-w-xl mt-4 sm:mt-6">
-              I'm <strong>Cata</strong>, a computer scientist focused on <strong></strong>cybersecurity.
+              I'm <strong>Cata</strong>, a computer scientist and <strong>security practitioner</strong>.
               <br />
               <br />
-              I like learning security from multiple angles and building projects that reflect that curiosity. My work spans areas such as digital forensics, penetration testing, SOC analysis, cryptography, network programming, OSINT, and compliance. <br /> <br /> I'm currently preparing for the CompTIA Security+ certification, as well as building and documenting my own projects.
+              I build tools, break systems (ethically), apply security engineering across networks, endpoints and cryptographic systems.
+              My work spans areas such as digital forensics, penetration testing, SOC analysis, cryptography, network programming, OSINT, and compliance. 
+              <br /> <br /> I'm currently preparing for the CompTIA Security+ certification, as well as building and documenting my own projects.
               </p>
               
               {/* Social Icons and Stats Row */}
