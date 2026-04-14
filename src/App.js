@@ -155,7 +155,7 @@ const Portfolio = () => {
                     <Github className="w-6 h-6 sm:w-5 sm:h-5" />
                   </a>
                   <a
-                    href="mailto:catacis@catacis.anonaddy.com?subject=Contact%20-%20Catalina%20Cisneros"
+                    href="mailto:cybercatahq@gmail.com?subject=Contact%20-%20Catalina%20Cisneros"
                     className="text-[#0D0C13] hover:text-[#0D0C13] transition-colors touch-manipulation">
                   <Mail className="w-6 h-6 sm:w-5 sm:h-5" />
                   </a>
