@@ -361,16 +361,104 @@ const Portfolio = () => {
       </section>
 
       {/* CyberCata Section */}
-      <section id="cybercata" className="py-10 sm:py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F3FF]">
+      <section
+        id="cybercata"
+        aria-labelledby="cybercata-heading"
+        className="py-10 sm:py-12 px-4 sm:px-6 md:px-8 lg:px-12 bg-[#F5F3FF]"
+      >
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0D0C13] mb-6 sm:mb-8 text-left">
+          <h3
+            id="cybercata-heading"
+            className="text-xl sm:text-2xl md:text-3xl font-bold text-[#0D0C13] mb-6 sm:mb-8 text-left"
+          >
             CyberCata
           </h3>
-          <p className="text-[#0D0C13] text-sm leading-relaxed mb-3">
-        Cybersecurity education for Spanish-speaking audiences 80,000+ followers across platforms. I break down networking fundamentals, 
-        security tools, OSINT, and protocols in Spanish — making security accessible to a global community that's often underserved by 
-        English-only content. <br /> <br /> Speaker at beginner cybersecurity events, including how to start your career in cybersecurity and breaking into the field.
-          </p>
+          <div className="grid grid-cols-1 gap-3 sm:gap-4">
+            <div className="bg-[#E5E7EB] border border-neutral-800 rounded-lg p-6 sm:p-8 md:p-10 lg:p-12 hover:bg-[#D1D5DB] transition-colors">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,10.5rem)_minmax(0,1fr)] lg:grid-cols-[minmax(0,12rem)_minmax(0,1fr)] gap-8 lg:gap-12 xl:gap-14 items-start">
+                {/* Right: dominant — first on mobile for reading order */}
+                <div className="order-1 md:order-2 min-w-0 space-y-4 sm:space-y-5 md:space-y-6">
+                  <p className="text-[#0D0C13] text-lg sm:text-xl md:text-2xl font-semibold leading-snug max-w-3xl">
+                    <strong className="font-bold">Making cybersecurity make sense</strong>.
+                  </p>
+                  <div className="space-y-4 sm:space-y-5 text-[#0D0C13] text-base sm:text-lg leading-relaxed max-w-3xl">
+                    <p>
+                      Cybersecurity educator building for{' '}
+                      <strong className="font-bold">Spanish-speaking audiences</strong> across platforms.
+                    </p>
+                    <p>
+                      I simplify networking fundamentals, security tools, OSINT, and protocols, making cybersecurity more accessible to a global community often overlooked by English only content.
+                    </p>
+                    <p>
+                      Speaker at beginner cybersecurity events, focused on helping others{' '}
+                      <strong className="font-bold">break into the field</strong> and navigate early career paths.
+                    </p>
+                  </div>
+                </div>
+                {/* Left: compact rail */}
+                <div className="order-2 md:order-1 flex flex-col items-center text-center gap-3 sm:gap-4 md:pt-1">
+                  <div className="w-full max-w-[88px] sm:max-w-[96px] flex items-center justify-center">
+                    <img
+                      src={process.env.PUBLIC_URL + '/NEWLOGO1.png'}
+                      alt="CyberCata logo"
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-0.5 sm:gap-1 items-center">
+                    <p className="text-[#0D0C13]/70 text-[10px] sm:text-xs font-medium tracking-tight leading-tight">
+                      Educator • Analyst • Speaker
+                    </p>
+                    <p className="text-[#0D0C13] text-xs sm:text-sm tracking-tight">
+                      <strong className="text-sm sm:text-base font-bold">80K+</strong>
+                      <span className="text-[#0D0C13]/90"> followers</span>
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap items-center justify-center gap-3 pt-0.5">
+                    <a
+                      href="https://www.youtube.com/@cybercata"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation"
+                      aria-label="CyberCata on YouTube"
+                      title="YouTube"
+                    >
+                      <Youtube className="w-6 h-6" />
+                    </a>
+                    <a
+                      href="https://tiktok.com/@catacisneros"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation"
+                      aria-label="Cata on TikTok"
+                      title="TikTok"
+                    >
+                      <TikTokIcon className="w-6 h-6" />
+                    </a>
+                    <a
+                      href="https://instagram.com/cyber.cata"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation"
+                      aria-label="CyberCata on Instagram"
+                      title="Instagram"
+                    >
+                      <Instagram className="w-6 h-6" />
+                    </a>
+                    <a
+                      href="https://catacisneros.github.io/cybercata/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#0D0C13] hover:text-[#A78BFA] transition-colors touch-manipulation"
+                      aria-label="CyberCata hub site"
+                      title="CyberCata site"
+                    >
+                      <Globe className="w-6 h-6" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
