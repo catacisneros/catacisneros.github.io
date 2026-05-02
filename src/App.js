@@ -409,7 +409,7 @@ const Portfolio = () => {
                       Educator • Analyst • Speaker
                     </p>
                     <p className="text-[#0D0C13] text-xs sm:text-sm tracking-tight">
-                      <strong className="text-sm sm:text-base font-bold">80K+</strong>
+                      <strong className="text-sm sm:text-base font-bold">100K+</strong>
                       <span className="text-[#0D0C13]/90"> followers</span>
                     </p>
                   </div>
